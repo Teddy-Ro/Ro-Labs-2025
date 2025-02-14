@@ -224,6 +224,24 @@ lab1_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 lab1_SOURCE_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025
 
+//Value Computed by CMake
+mymath_BINARY_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025/build/mymath
+
+//Value Computed by CMake
+mymath_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+mymath_SOURCE_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025/mymath
+
+//Value Computed by CMake
+myprint_BINARY_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025/build/myprint
+
+//Value Computed by CMake
+myprint_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+myprint_SOURCE_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025/myprint
+
 
 ########################
 # INTERNAL cache entries
@@ -329,7 +347,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=3
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

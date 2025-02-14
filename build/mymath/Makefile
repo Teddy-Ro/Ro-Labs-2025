@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles /home/ted/BMSTUproga/Ro-Labs-2025/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles /home/ted/BMSTUproga/Ro-Labs-2025/build/mymath//CMakeFiles/progress.marks
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,94 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named lab1
+# Convenience name for target.
+mymath/CMakeFiles/mymath.dir/rule:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath/CMakeFiles/mymath.dir/rule
+.PHONY : mymath/CMakeFiles/mymath.dir/rule
 
-# Build rule for target.
-lab1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab1
-.PHONY : lab1
-
-# fast build rule for target.
-lab1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/build
-.PHONY : lab1/fast
-
-#=============================================================================
-# Target rules for targets named clang-format
-
-# Build rule for target.
-clang-format: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clang-format
-.PHONY : clang-format
-
-# fast build rule for target.
-clang-format/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/build
-.PHONY : clang-format/fast
-
-#=============================================================================
-# Target rules for targets named mymath
-
-# Build rule for target.
-mymath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath
+# Convenience name for target.
+mymath: mymath/CMakeFiles/mymath.dir/rule
 .PHONY : mymath
 
 # fast build rule for target.
 mymath/fast:
-	$(MAKE) $(MAKESILENT) -f mymath/CMakeFiles/mymath.dir/build.make mymath/CMakeFiles/mymath.dir/build
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f mymath/CMakeFiles/mymath.dir/build.make mymath/CMakeFiles/mymath.dir/build
 .PHONY : mymath/fast
 
-#=============================================================================
-# Target rules for targets named myprint
-
-# Build rule for target.
-myprint: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 myprint
-.PHONY : myprint
-
-# fast build rule for target.
-myprint/fast:
-	$(MAKE) $(MAKESILENT) -f myprint/CMakeFiles/myprint.dir/build.make myprint/CMakeFiles/myprint.dir/build
-.PHONY : myprint/fast
-
-main_lab1.o: main_lab1.cpp.o
-.PHONY : main_lab1.o
+mymath.o: mymath.cpp.o
+.PHONY : mymath.o
 
 # target to build an object file
-main_lab1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main_lab1.cpp.o
-.PHONY : main_lab1.cpp.o
+mymath.cpp.o:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f mymath/CMakeFiles/mymath.dir/build.make mymath/CMakeFiles/mymath.dir/mymath.cpp.o
+.PHONY : mymath.cpp.o
 
-main_lab1.i: main_lab1.cpp.i
-.PHONY : main_lab1.i
+mymath.i: mymath.cpp.i
+.PHONY : mymath.i
 
 # target to preprocess a source file
-main_lab1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main_lab1.cpp.i
-.PHONY : main_lab1.cpp.i
+mymath.cpp.i:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f mymath/CMakeFiles/mymath.dir/build.make mymath/CMakeFiles/mymath.dir/mymath.cpp.i
+.PHONY : mymath.cpp.i
 
-main_lab1.s: main_lab1.cpp.s
-.PHONY : main_lab1.s
+mymath.s: mymath.cpp.s
+.PHONY : mymath.s
 
 # target to generate assembly for a file
-main_lab1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main_lab1.cpp.s
-.PHONY : main_lab1.cpp.s
+mymath.cpp.s:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f mymath/CMakeFiles/mymath.dir/build.make mymath/CMakeFiles/mymath.dir/mymath.cpp.s
+.PHONY : mymath.cpp.s
 
 # Help Target
 help:
@@ -200,13 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... clang-format"
-	@echo "... lab1"
 	@echo "... mymath"
-	@echo "... myprint"
-	@echo "... main_lab1.o"
-	@echo "... main_lab1.i"
-	@echo "... main_lab1.s"
+	@echo "... mymath.o"
+	@echo "... mymath.i"
+	@echo "... mymath.s"
 .PHONY : help
 
 
@@ -218,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
