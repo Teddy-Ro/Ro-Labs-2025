@@ -1,33 +1,22 @@
 cmake_minimum_required(VERSION 3.23)
 
-project(lab1)
+set(project "lab_1_2")
+project(${project})
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 17)
 
+include_directories(${CMAKE_SOURCE_DIR}/include)
 
-set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
+link_directories(${CMAKE_SOURCE_DIR}/lib)
 
+set(${project}_SOURCES
+        main_lab_1_2.cpp)
 
-set(SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/main_lab1.cpp
-)
+set(${project}_SOURCE_LIST
+        ${${project}_SOURCES})
 
-add_subdirectory(mymath)
-add_subdirectory(myprint)
+add_executable(${project}
+        ${${project}_SOURCE_LIST})
 
-add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
-
-set_property(TARGET ${CMAKE_PROJECT_NAME} PROPERTY CXX_STANDARD 20)
-
-target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -Wall -Wextra -Werror -Wpedantic)
-
-if(ENABLE_DEBUG)
-    target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -g)
-endif()
-
-target_link_libraries(${CMAKE_PROJECT_NAME} mymath myprint)
-
-add_custom_target(
-    clang-format
-    COMMAND clang-format --dry-run -Werror ${SOURCES} ${HEADERS}
-)
+target_link_libraries(${project}
+    myprint)

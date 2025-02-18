@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/lab_1_2.dir/main_lab_1_2.cpp.o -o lab_1_2   -L/home/ted/BMSTUproga/Ro-Labs-2025/lib  -Wl,-rpath,/home/ted/BMSTUproga/Ro-Labs-2025/lib -lmyprint 

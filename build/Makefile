@@ -117,80 +117,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab1
+# Target rules for targets named lab_1_2
 
 # Build rule for target.
-lab1: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab1
-.PHONY : lab1
+lab_1_2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab_1_2
+.PHONY : lab_1_2
 
 # fast build rule for target.
-lab1/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/build
-.PHONY : lab1/fast
+lab_1_2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_1_2.dir/build.make CMakeFiles/lab_1_2.dir/build
+.PHONY : lab_1_2/fast
 
-#=============================================================================
-# Target rules for targets named clang-format
-
-# Build rule for target.
-clang-format: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clang-format
-.PHONY : clang-format
-
-# fast build rule for target.
-clang-format/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/build
-.PHONY : clang-format/fast
-
-#=============================================================================
-# Target rules for targets named mymath
-
-# Build rule for target.
-mymath: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mymath
-.PHONY : mymath
-
-# fast build rule for target.
-mymath/fast:
-	$(MAKE) $(MAKESILENT) -f mymath/CMakeFiles/mymath.dir/build.make mymath/CMakeFiles/mymath.dir/build
-.PHONY : mymath/fast
-
-#=============================================================================
-# Target rules for targets named myprint
-
-# Build rule for target.
-myprint: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 myprint
-.PHONY : myprint
-
-# fast build rule for target.
-myprint/fast:
-	$(MAKE) $(MAKESILENT) -f myprint/CMakeFiles/myprint.dir/build.make myprint/CMakeFiles/myprint.dir/build
-.PHONY : myprint/fast
-
-main_lab1.o: main_lab1.cpp.o
-.PHONY : main_lab1.o
+main_lab_1_2.o: main_lab_1_2.cpp.o
+.PHONY : main_lab_1_2.o
 
 # target to build an object file
-main_lab1.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main_lab1.cpp.o
-.PHONY : main_lab1.cpp.o
+main_lab_1_2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_1_2.dir/build.make CMakeFiles/lab_1_2.dir/main_lab_1_2.cpp.o
+.PHONY : main_lab_1_2.cpp.o
 
-main_lab1.i: main_lab1.cpp.i
-.PHONY : main_lab1.i
+main_lab_1_2.i: main_lab_1_2.cpp.i
+.PHONY : main_lab_1_2.i
 
 # target to preprocess a source file
-main_lab1.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main_lab1.cpp.i
-.PHONY : main_lab1.cpp.i
+main_lab_1_2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_1_2.dir/build.make CMakeFiles/lab_1_2.dir/main_lab_1_2.cpp.i
+.PHONY : main_lab_1_2.cpp.i
 
-main_lab1.s: main_lab1.cpp.s
-.PHONY : main_lab1.s
+main_lab_1_2.s: main_lab_1_2.cpp.s
+.PHONY : main_lab_1_2.s
 
 # target to generate assembly for a file
-main_lab1.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab1.dir/build.make CMakeFiles/lab1.dir/main_lab1.cpp.s
-.PHONY : main_lab1.cpp.s
+main_lab_1_2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab_1_2.dir/build.make CMakeFiles/lab_1_2.dir/main_lab_1_2.cpp.s
+.PHONY : main_lab_1_2.cpp.s
 
 # Help Target
 help:
@@ -200,13 +161,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... clang-format"
-	@echo "... lab1"
-	@echo "... mymath"
-	@echo "... myprint"
-	@echo "... main_lab1.o"
-	@echo "... main_lab1.i"
-	@echo "... main_lab1.s"
+	@echo "... lab_1_2"
+	@echo "... main_lab_1_2.o"
+	@echo "... main_lab_1_2.i"
+	@echo "... main_lab_1_2.s"
 .PHONY : help
 
 
