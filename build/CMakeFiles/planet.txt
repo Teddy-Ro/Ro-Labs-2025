@@ -1,0 +1,10 @@
+9
+Mercury	4878	0	0
+Venus	12104	0	0
+Earth	12774	1	1
+Mars	6786	1	2
+Jupiter	142796	0	16
+Saturn	120000	0	17
+Uranus	51108	0	5
+Neptune	49600	0	2
+Pluto	2280	0	1
