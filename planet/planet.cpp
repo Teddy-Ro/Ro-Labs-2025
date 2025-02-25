@@ -2,85 +2,62 @@
 #include <cstring>    // для работы с char*
 #include <fstream>
 #include <iostream>
-#include <planet.hpp>
-#include <vector>
+#include "planet.hpp"
 
-class Planet {
- private:
-    char* name;          // Название планеты (динамическая память)
-    long long diameter;  // Диаметр планеты
-    int satellites;      // Количество спутников
-    bool hasLife;        // Наличие жизни
+// Конструкторы
+Planet::Planet() : name(nullptr), diameter(0), satellites(0), hasLife(false) {}
 
- public:
-    // Конструкторы
-    Planet() : name(nullptr), diameter(0), satellites(0), hasLife(false) {}
+Planet::Planet(const char* n, long long d, int s, bool l) : diameter(d), satellites(s), hasLife(l) {
+    name = new char[strlen(n) + 1];  // Выделяем память для имени
+    std::strcpy(name, n);            // Копируем имя
+}
 
-    Planet(const char* n, long long d, int s, bool l) : diameter(d), satellites(s), hasLife(l) {
-        name = new char[strlen(n) + 1];  // Выделяем память для имени
-        std::strcpy(name, n);            // Копируем имя
-    }
+// Деструктор
+Planet::~Planet() {
+    delete[] name;  // Освобождаем память
+}
 
-    // Деструктор
-    ~Planet() {
-        delete[] name;  // Освобождаем память
-    }
+// Конструктор копирования
+Planet::Planet(const Planet& other) : diameter(other.diameter), satellites(other.satellites), hasLife(other.hasLife) {
+    name = new char[strlen(other.name) + 1];
+    std::strcpy(name, other.name);
+}
 
-    // Конструктор копирования
-    Planet(const Planet& other) : diameter(other.diameter), satellites(other.satellites), hasLife(other.hasLife) {
+// Оператор присваивания
+Planet& Planet::operator=(const Planet& other) {
+    if (this != &other) {  // Проверка на самоприсваивание
+        delete[] name;     // Освобождаем старую память
         name = new char[strlen(other.name) + 1];
         std::strcpy(name, other.name);
+        diameter = other.diameter;
+        satellites = other.satellites;
+        hasLife = other.hasLife;
     }
+    return *this;
+}
 
-    // Оператор присваивания
-    Planet& operator=(const Planet& other) {
-        if (this != &other) {  // Проверка на самоприсваивание
-            delete[] name;     // Освобождаем старую память
-            name = new char[strlen(other.name) + 1];
-            std::strcpy(name, other.name);
-            diameter = other.diameter;
-            satellites = other.satellites;
-            hasLife = other.hasLife;
-        }
-        return *this;
-    }
+// Геттеры и сеттеры
+const char* Planet::getName() const { return name; }
+long long Planet::getDiameter() const { return diameter; }
+int Planet::getSatellites() const { return satellites; }
+bool Planet::getHasLife() const { return hasLife; }
 
-    // Геттеры и сеттеры
-    const char* getName() const { return name; }
-    long long getDiameter() const { return diameter; }
-    int getSatellites() const { return satellites; }
-    bool getHasLife() const { return hasLife; }
+void Planet::setName(const char* n) {
+    delete[] name;  // Освобождаем старую память
+    name = new char[strlen(n) + 1];
+    std::strcpy(name, n);
+}
+void Planet::setDiameter(long long d) { diameter = d; }
+void Planet::setSatellites(int s) { satellites = s; }
+void Planet::setHasLife(bool l) { hasLife = l; }
 
-    void setName(const char* n) {
-        delete[] name;  // Освобождаем старую память
-        name = new char[strlen(n) + 1];
-        std::strcpy(name, n);
-    }
-    void setDiameter(long long d) { diameter = d; }
-    void setSatellites(int s) { satellites = s; }
-    void setHasLife(bool l) { hasLife = l; }
-
-    // Перегрузка операторов ввода/вывода
-    friend std::ostream& operator<<(std::ostream& os, const Planet& planet);
-    friend std::istream& operator>>(std::istream& is, Planet& planet);
-
-    // Перегрузка операторов сравнения
-    bool operator<(const Planet& other) const {
-        return diameter < other.diameter;  // Сортировка по диаметру
-    }
-    bool operator==(const Planet& other) const {
-        return std::strcmp(name, other.name) == 0 && diameter == other.diameter && satellites == other.satellites && hasLife == other.hasLife;
-    }
-};
-
-// Перегрузка оператора вывода
+// Перегрузка операторов ввода/вывода
 std::ostream& operator<<(std::ostream& os, const Planet& planet) {
     os << "Name: " << planet.name << ", Diameter: " << planet.diameter << " km, Satellites: " << planet.satellites
        << ", Life: " << (planet.hasLife ? "Yes" : "No");
     return os;
 }
 
-// Перегрузка оператора ввода
 std::istream& operator>>(std::istream& is, Planet& planet) {
     char buffer[256];
     is >> buffer >> planet.diameter >> planet.satellites >> planet.hasLife;
@@ -88,9 +65,17 @@ std::istream& operator>>(std::istream& is, Planet& planet) {
     return is;
 }
 
+// Перегрузка операторов сравнения
+bool Planet::operator<(const Planet& other) const {
+    return diameter < other.diameter;  // Сортировка по диаметру
+}
+
+bool Planet::operator==(const Planet& other) const {
+    return std::strcmp(name, other.name) == 0 && diameter == other.diameter && satellites == other.satellites && hasLife == other.hasLife;
+}
 
 // Чтение БД из файла
-Planet* Planet::readDatabaseFromFile(const char* filename, int& count) {
+Planet* Planet::readFromFile(const char* filename, int& count) {
     std::ifstream file(filename);
     if (!file.is_open()) {
         std::cerr << "Не удалось открыть файл: " << filename << std::endl;
@@ -123,7 +108,7 @@ Planet* Planet::readDatabaseFromFile(const char* filename, int& count) {
 }
 
 // Запись БД в файл
-void Planet::writeDatabaseToFile(const char* filename, Planet* database, int count) {
+void Planet::writeToFile(const char* filename, Planet* database, int count) {
     std::ofstream file(filename);
     if (file.is_open()) {
         for (int i = 0; i < count; ++i) {
@@ -136,14 +121,14 @@ void Planet::writeDatabaseToFile(const char* filename, Planet* database, int cou
 }
 
 // Сортировка БД
-void Planet::sortDatabase(Planet* database, int count) {
+void Planet::sortPlanets(Planet* database, int count) {
     std::sort(database, database + count, [](const Planet& a, const Planet& b) {
         return a < b; // Используем перегруженный оператор <
     });
-} //переписать
+}
 
 // Добавление нового объекта в БД
-Planet* Planet::addPlanetToDatabase(Planet* database, int& count, const Planet& planet) {
+Planet* Planet::addPlanet(Planet* database, int& count, const Planet& planet) {
     Planet* newDatabase = new Planet[count + 1];
     for (int i = 0; i < count; ++i) {
         newDatabase[i] = database[i];
@@ -155,7 +140,7 @@ Planet* Planet::addPlanetToDatabase(Planet* database, int& count, const Planet& 
 }
 
 // Удаление объекта из БД
-Planet* Planet::removePlanetFromDatabase(Planet* database, int& count, const char* planetName) {
+Planet* Planet::removePlanet(Planet* database, int& count, const char* planetName) {
     int indexToRemove = -1;
     for (int i = 0; i < count; ++i) {
         if (std::strcmp(database[i].getName(), planetName) == 0) {
@@ -182,7 +167,7 @@ Planet* Planet::removePlanetFromDatabase(Planet* database, int& count, const cha
 }
 
 // Редактирование БД
-bool Planet::editPlanetInDatabase(Planet* database, int count, const char* planetName, const Planet& newPlanetData) {
+bool Planet::editPlanet(Planet* database, int count, const char* planetName, const Planet& newPlanetData) {
     for (int i = 0; i < count; ++i) {
         if (std::strcmp(database[i].getName(), planetName) == 0) {
             database[i] = newPlanetData;  // Заменяем данные планеты
@@ -194,7 +179,7 @@ bool Planet::editPlanetInDatabase(Planet* database, int count, const char* plane
 }
 
 // Вывод БД на экран
-void Planet::printDatabase(Planet* database, int count) {
+void Planet::printPlanets(Planet* database, int count) {
     for (int i = 0; i < count; ++i) {
         std::cout << database[i] << std::endl;
     }

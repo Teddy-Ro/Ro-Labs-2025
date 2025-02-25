@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/lab2.dir/main_planet.cpp.o CMakeFiles/lab2.dir/planetLogic.cpp.o -o lab2  planet/libplanet.a 
