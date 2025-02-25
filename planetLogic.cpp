@@ -9,6 +9,8 @@ Planet FillPlanetsParametrs() {
     int newSatellites;
     bool newHasLife;
 
+    std::cin.ignore(); // Очистка буфера от предыдущих символов новой строки
+
     std::cout << "Enter planet name: ";
     std::cin.getline(newName, 100);  // Считываем имя планеты
 
@@ -29,6 +31,7 @@ Planet FillPlanetsParametrs() {
     Planet newPlanetData(newName, newDiameter, newSatellites, newHasLife);
     return newPlanetData;
 }
+
 
 int ChoiceMethod() {
     int choice;
@@ -76,6 +79,8 @@ void removePlanet(Planet*& planets, int& count) {
 // Редактирование данных о планете
 void editPlanet(Planet* planets, int count) {
     char name[100];
+    std::cout << "Введите название планеты для редактирования: ";
+    std::cin >> name;
 
     Planet newPlanetData = FillPlanetsParametrs();
 

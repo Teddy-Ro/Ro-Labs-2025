@@ -9,7 +9,8 @@ Planet::Planet() : name(nullptr), diameter(0), satellites(0), hasLife(false) {}
 
 Planet::Planet(const char* n, long long d, int s, bool l) : diameter(d), satellites(s), hasLife(l) {
     name = new char[strlen(n) + 1];  // Выделяем память для имени
-    std::strcpy(name, n);            // Копируем имя
+    std::strncpy(name, n, strlen(n) + 1);  // Копируем имя с ограничением длины
+    name[strlen(n)] = '\0';  // Убедимся, что строка завершается нулевым символом
 }
 
 // Деструктор
@@ -20,7 +21,8 @@ Planet::~Planet() {
 // Конструктор копирования
 Planet::Planet(const Planet& other) : diameter(other.diameter), satellites(other.satellites), hasLife(other.hasLife) {
     name = new char[strlen(other.name) + 1];
-    std::strcpy(name, other.name);
+    std::strncpy(name, other.name, strlen(other.name) + 1);  // Копируем имя с ограничением длины
+    name[strlen(other.name)] = '\0';  // Убедимся, что строка завершается нулевым символом
 }
 
 // Оператор присваивания
@@ -28,7 +30,8 @@ Planet& Planet::operator=(const Planet& other) {
     if (this != &other) {  // Проверка на самоприсваивание
         delete[] name;     // Освобождаем старую память
         name = new char[strlen(other.name) + 1];
-        std::strcpy(name, other.name);
+        std::strncpy(name, other.name, strlen(other.name) + 1);  // Копируем имя с ограничением длины
+        name[strlen(other.name)] = '\0';  // Убедимся, что строка завершается нулевым символом
         diameter = other.diameter;
         satellites = other.satellites;
         hasLife = other.hasLife;
@@ -45,7 +48,8 @@ bool Planet::getHasLife() const { return hasLife; }
 void Planet::setName(const char* n) {
     delete[] name;  // Освобождаем старую память
     name = new char[strlen(n) + 1];
-    std::strcpy(name, n);
+    std::strncpy(name, n, strlen(n) + 1);  // Копируем имя с ограничением длины
+    name[strlen(n)] = '\0';  // Убедимся, что строка завершается нулевым символом
 }
 void Planet::setDiameter(long long d) { diameter = d; }
 void Planet::setSatellites(int s) { satellites = s; }
@@ -83,26 +87,30 @@ Planet* Planet::readFromFile(const char* filename, int& count) {
         return nullptr;
     }
 
-    // Определяем количество планет в файле (простой подход)
-    count = 0;
-    char buffer[256];
-    while (file.getline(buffer, sizeof(buffer))) {
-        count++;
+    // Читаем количество планет
+    file >> count;
+    if (count <= 0) {
+        std::cerr << "Некорректное количество планет в файле." << std::endl;
+        file.close();
+        return nullptr;
     }
-    file.clear();
-    file.seekg(0, std::ios::beg); // Возвращаемся в начало файла
 
+    // Создаем массив планет
     Planet* database = new Planet[count];
+
+    // Читаем данные о каждой планете
     for (int i = 0; i < count; ++i) {
-        file >> database[i];
-        if (file.fail()) {
-            // Обработка ошибки чтения
-            delete[] database;
-            count = 0;
-            file.close();
-            return nullptr;
-        }
+        char name[100];
+        long long diameter;
+        int satellites;
+        bool hasLife;
+
+        file >> name >> diameter >> hasLife >> satellites;
+
+        // Создаем объект Planet и добавляем его в массив
+        database[i] = Planet(name, diameter, satellites, hasLife);
     }
+
     file.close();
     return database;
 }
