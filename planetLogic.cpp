@@ -35,19 +35,32 @@ Planet FillPlanetsParametrs() {
 
 int ChoiceMethod() {
     int choice;
-    std::cout << "\n=== Меню ===\n";
-    std::cout << "1. Загрузить данные из файла\n";
-    std::cout << "2. Сохранить данные в файл\n";
-    std::cout << "3. Добавить новую планету\n";
-    std::cout << "4. Удалить планету\n";
-    std::cout << "5. Редактировать данные о планете\n";
-    std::cout << "6. Сортировать планеты по диаметру\n";
-    std::cout << "7. Вывести все планеты на экран\n";
-    std::cout << "8. Выход\n";
-    std::cout << "Выберите опцию: ";
-    std::cin >> choice;
-    return choice;
+    while (true) {
+        std::cout << "\n=== Меню ===\n";
+        std::cout << "1. Загрузить данные из файла\n";
+        std::cout << "2. Сохранить данные в файл\n";
+        std::cout << "3. Добавить новую планету\n";
+        std::cout << "4. Удалить планету\n";
+        std::cout << "5. Редактировать данные о планете\n";
+        std::cout << "6. Сортировать планеты по диаметру\n";
+        std::cout << "7. Вывести все планеты на экран\n";
+        std::cout << "8. Выход\n";
+        std::cout << "Выберите опцию: ";
+
+        if (std::cin >> choice) {
+            if (choice >= 1 && choice <= 8) {
+                return choice;
+            } else {
+                std::cout << "Недопустимый выбор. Пожалуйста, выберите опцию от 1 до 8.\n";
+            }
+        } else {
+            std::cout << "Некорректный ввод. Пожалуйста, введите целое число.\n";
+            std::cin.clear(); // Очищаем флаг ошибки
+            std::cin.ignore(10000, '\n'); // Игнорируем оставшиеся символы в буфере
+        }
+    }
 }
+
 
 // Загрузка данных из файла
 void loadDataFromFile(Planet*& planets, int& count, const char* filename) {

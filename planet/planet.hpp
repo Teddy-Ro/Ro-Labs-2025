@@ -41,14 +41,15 @@ class Planet {
 
     // Перегрузка операторов сравнения
     bool operator<(const Planet& other) const;
+    bool operator>(const Planet& other) const;
     bool operator==(const Planet& other) const;
 
     // Статические методы для работы с базой данных
     static Planet* readFromFile(const char* filename, int& count);
     static void writeToFile(const char* filename, Planet* database, int count);
     static void sortPlanets(Planet* database, int count);
-    static Planet* addPlanet(Planet* database, int& count, const Planet& planet);
-    static Planet* removePlanet(Planet* database, int& count, const char* planetName);
+    static void addPlanet(Planet*& database, int& count, const Planet& planet);
+    static void removePlanet(Planet*& database, int& count, const char* planetName);
     static bool editPlanet(Planet* database, int count, const char* planetName, const Planet& newPlanetData);
     static void printPlanets(Planet* database, int count);
 };

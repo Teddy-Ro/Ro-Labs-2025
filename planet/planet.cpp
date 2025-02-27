@@ -57,8 +57,8 @@ void Planet::setHasLife(bool l) { hasLife = l; }
 
 // Перегрузка операторов ввода/вывода
 std::ostream& operator<<(std::ostream& os, const Planet& planet) {
-    os << "Name: " << planet.name << ", Diameter: " << planet.diameter << " km, Satellites: " << planet.satellites
-       << ", Life: " << (planet.hasLife ? "Yes" : "No");
+    os << planet.name << " " << planet.diameter << " " << planet.satellites
+       << " " << (planet.hasLife ? 1 : 0);
     return os;
 }
 
@@ -73,6 +73,11 @@ std::istream& operator>>(std::istream& is, Planet& planet) {
 bool Planet::operator<(const Planet& other) const {
     return diameter < other.diameter;  // Сортировка по диаметру
 }
+
+bool Planet::operator>(const Planet& other) const {
+    return other < *this;  // Используем существующую перегрузку <
+}
+
 
 bool Planet::operator==(const Planet& other) const {
     return std::strcmp(name, other.name) == 0 && diameter == other.diameter && satellites == other.satellites && hasLife == other.hasLife;
@@ -105,7 +110,7 @@ Planet* Planet::readFromFile(const char* filename, int& count) {
         int satellites;
         bool hasLife;
 
-        file >> name >> diameter >> hasLife >> satellites;
+        file >> name >> diameter >> satellites >> hasLife;
 
         // Создаем объект Planet и добавляем его в массив
         database[i] = Planet(name, diameter, satellites, hasLife);
@@ -119,6 +124,8 @@ Planet* Planet::readFromFile(const char* filename, int& count) {
 void Planet::writeToFile(const char* filename, Planet* database, int count) {
     std::ofstream file(filename);
     if (file.is_open()) {
+        file << count <<  '\n' <<std::flush;
+
         for (int i = 0; i < count; ++i) {
             file << database[i] << std::endl;
         }
@@ -130,13 +137,20 @@ void Planet::writeToFile(const char* filename, Planet* database, int count) {
 
 // Сортировка БД
 void Planet::sortPlanets(Planet* database, int count) {
-    std::sort(database, database + count, [](const Planet& a, const Planet& b) {
-        return a < b; // Используем перегруженный оператор <
-    });
+    for (int i = 0; i < count - 1; ++i) {
+        for (int j = 0; j < count - i - 1; ++j) {
+            if (database[j] > database[j + 1]) {
+                Planet temp = database[j];
+                database[j] = database[j + 1];
+                database[j + 1] = temp;
+            }
+        }
+    }
 }
 
+
 // Добавление нового объекта в БД
-Planet* Planet::addPlanet(Planet* database, int& count, const Planet& planet) {
+void Planet::addPlanet(Planet*& database, int& count, const Planet& planet) {
     Planet* newDatabase = new Planet[count + 1];
     for (int i = 0; i < count; ++i) {
         newDatabase[i] = database[i];
@@ -144,11 +158,12 @@ Planet* Planet::addPlanet(Planet* database, int& count, const Planet& planet) {
     newDatabase[count] = planet;
     count++;
     delete[] database;
-    return newDatabase;
+    database = newDatabase; // Обновляем указатель database
 }
 
+
 // Удаление объекта из БД
-Planet* Planet::removePlanet(Planet* database, int& count, const char* planetName) {
+void Planet::removePlanet(Planet*& database, int& count, const char* planetName) {
     int indexToRemove = -1;
     for (int i = 0; i < count; ++i) {
         if (std::strcmp(database[i].getName(), planetName) == 0) {
@@ -159,7 +174,7 @@ Planet* Planet::removePlanet(Planet* database, int& count, const char* planetNam
 
     if (indexToRemove == -1) {
         std::cerr << "Планета с именем " << planetName << " не найдена." << std::endl;
-        return database; // Ничего не меняем, возвращаем старую БД
+        return;
     }
 
     Planet* newDatabase = new Planet[count - 1];
@@ -169,10 +184,17 @@ Planet* Planet::removePlanet(Planet* database, int& count, const char* planetNam
             newDatabase[newIndex++] = database[i];
         }
     }
+
+    std::cout << "Планета: " << planetName << " удалена." << std::endl;
+
     count--;
-    delete[] database;
-    return newDatabase;
+    delete[] database; // Освобождаем память старого массива
+    database = newDatabase; // Обновляем указатель на новый массив
+
+    // Удаление ненужного return
 }
+
+
 
 // Редактирование БД
 bool Planet::editPlanet(Planet* database, int count, const char* planetName, const Planet& newPlanetData) {
