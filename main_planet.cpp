@@ -1,8 +1,8 @@
-#include <iostream>
-#include "planetLogic.hpp"
 #include <fstream>
+#include <iostream>
 #include "house/house.hpp"
 #include "planet/planet.hpp"
+#include "planetLogic.hpp"
 
 int main() {
     int choice = choiceLib();
@@ -27,7 +27,6 @@ int main() {
             return 1;
     }
 
-    // Remember to free memory if the program reaches this point
     if (choice == 1 && planetDataBase != nullptr) {
         delete[] planetDataBase;
     } else if (choice == 2 && houseDataBase != nullptr) {

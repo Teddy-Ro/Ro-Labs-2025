@@ -1,38 +1,33 @@
-#include <cstring>    // для работы с char*
+#include "house.hpp"
+#include <cstring>
 #include <fstream>
 #include <iostream>
-#include "house.hpp"
 
-// Конструкторы
-House::House() : address(nullptr), floors(0), apartments(0), hasElevator(false) {}
+House::House() : address(nullptr), floors(0), apartments(0), hasElevator(false) {
+}
 
-House::House(const char* addr, int f, int a, bool elevator)
-    : floors(f), apartments(a), hasElevator(elevator) {
+House::House(const char* addr, int f, int a, bool elevator) : floors(f), apartments(a), hasElevator(elevator) {
     address = new char[strlen(addr) + 1];
-    std::strncpy(address, addr, strlen(addr) + 1);  // Копируем адрес с ограничением длины
-    address[strlen(addr)] = '\0';  // Убедимся, что строка завершается нулевым символом
+    std::strncpy(address, addr, strlen(addr) + 1);
+    address[strlen(addr)] = '\0';
 }
 
-// Деструктор
 House::~House() {
-    delete[] address;  // Освобождаем память
+    delete[] address;
 }
 
-// Конструктор копирования
-House::House(const House& other)
-    : floors(other.floors), apartments(other.apartments), hasElevator(other.hasElevator) {
+House::House(const House& other) : floors(other.floors), apartments(other.apartments), hasElevator(other.hasElevator) {
     address = new char[strlen(other.address) + 1];
-    std::strncpy(address, other.address, strlen(other.address) + 1);  // Копируем адрес с ограничением длины
-    address[strlen(other.address)] = '\0';  // Убедимся, что строка завершается нулевым символом
+    std::strncpy(address, other.address, strlen(other.address) + 1);
+    address[strlen(other.address)] = '\0';
 }
 
-// Оператор присваивания
 House& House::operator=(const House& other) {
-    if (this != &other) {  // Проверка на самоприсваивание
-        delete[] address;     // Освобождаем старую память
+    if (this != &other) {
+        delete[] address;
         address = new char[strlen(other.address) + 1];
-        std::strncpy(address, other.address, strlen(other.address) + 1);  // Копируем адрес с ограничением длины
-        address[strlen(other.address)] = '\0';  // Убедимся, что строка завершается нулевым символом
+        std::strncpy(address, other.address, strlen(other.address) + 1);
+        address[strlen(other.address)] = '\0';
         floors = other.floors;
         apartments = other.apartments;
         hasElevator = other.hasElevator;
@@ -40,50 +35,59 @@ House& House::operator=(const House& other) {
     return *this;
 }
 
-// Геттеры и сеттеры
-const char* House::getAddress() const { return address; }
-int House::getFloors() const { return floors; }
-int House::getApartments() const { return apartments; }
-bool House::getHasElevator() const { return hasElevator; }
+const char* House::getAddress() const {
+    return address;
+}
+int House::getFloors() const {
+    return floors;
+}
+int House::getApartments() const {
+    return apartments;
+}
+bool House::getHasElevator() const {
+    return hasElevator;
+}
 
 void House::setAddress(const char* addr) {
-    delete[] address;  // Освобождаем старую память
+    delete[] address;
     address = new char[strlen(addr) + 1];
-    std::strncpy(address, addr, strlen(addr) + 1);  // Копируем адрес с ограничением длины
-    address[strlen(addr)] = '\0';  // Убедимся, что строка завершается нулевым символом
+    std::strncpy(address, addr, strlen(addr) + 1);
+    address[strlen(addr)] = '\0';
 }
-void House::setFloors(int f) { floors = f; }
-void House::setApartments(int a) { apartments = a; }
-void House::setHasElevator(bool elevator) { hasElevator = elevator; }
+void House::setFloors(int f) {
+    floors = f;
+}
+void House::setApartments(int a) {
+    apartments = a;
+}
+void House::setHasElevator(bool elevator) {
+    hasElevator = elevator;
+}
 
-// Перегрузка операторов ввода/вывода
 std::ostream& operator<<(std::ostream& os, const House& house) {
-    os << house.address << " " << house.floors << " " << house.apartments
-       << " " << (house.hasElevator ? 1 : 0);
+    os << house.address << " " << house.floors << " " << house.apartments << " " << (house.hasElevator ? 1 : 0);
     return os;
 }
 
 std::istream& operator>>(std::istream& is, House& house) {
     char buffer[256];
     is >> buffer >> house.floors >> house.apartments >> house.hasElevator;
-    house.setAddress(buffer);  // Устанавливаем адрес через сеттер
+    house.setAddress(buffer);
     return is;
 }
 
-// Перегрузка операторов сравнения
 bool House::operator<(const House& other) const {
-    return floors < other.floors;  // Сортировка по количеству этажей
+    return floors < other.floors;
 }
 
 bool House::operator>(const House& other) const {
-    return other < *this;  // Используем существующую перегрузку <
+    return other < *this;
 }
 
 bool House::operator==(const House& other) const {
     return std::strcmp(address, other.address) == 0 && floors == other.floors && apartments == other.apartments && hasElevator == other.hasElevator;
 }
 
-// Чтение БД из файла
 House* House::readFromFile(const char* filename, int& count) {
     std::ifstream file(filename);
     if (!file.is_open()) {
@@ -92,7 +96,6 @@ House* House::readFromFile(const char* filename, int& count) {
         return nullptr;
     }
 
-    // Читаем количество домов
     file >> count;
     if (count <= 0) {
         std::cerr << "Некорректное количество домов в файле." << std::endl;
@@ -100,10 +103,8 @@ House* House::readFromFile(const char* filename, int& count) {
         return nullptr;
     }
 
-    // Создаем массив домов
     House* database = new House[count];
 
-    // Читаем данные о каждом доме
     for (int i = 0; i < count; ++i) {
         char addr[100];
         int floors;
@@ -112,7 +113,6 @@ House* House::readFromFile(const char* filename, int& count) {
 
         file >> addr >> floors >> apartments >> hasElevator;
 
-        // Создаем объект House и добавляем его в массив
         database[i] = House(addr, floors, apartments, hasElevator);
     }
 
@@ -120,7 +120,6 @@ House* House::readFromFile(const char* filename, int& count) {
     return database;
 }
 
-// Запись БД в файл
 void House::writeToFile(const char* filename, House* database, int count) {
     std::ofstream file(filename);
     if (file.is_open()) {
@@ -135,7 +134,6 @@ void House::writeToFile(const char* filename, House* database, int count) {
     }
 }
 
-// Сортировка БД
 void House::sortHouses(House* database, int count) {
     for (int i = 0; i < count - 1; ++i) {
         for (int j = 0; j < count - i - 1; ++j) {
@@ -148,7 +146,6 @@ void House::sortHouses(House* database, int count) {
     }
 }
 
-// Добавление нового объекта в БД
 void House::addHouse(House*& database, int& count, const House& house) {
     House* newDatabase = new House[count + 1];
     for (int i = 0; i < count; ++i) {
@@ -157,10 +154,9 @@ void House::addHouse(House*& database, int& count, const House& house) {
     newDatabase[count] = house;
     count++;
     delete[] database;
-    database = newDatabase; // Обновляем указатель database
+    database = newDatabase;
 }
 
-// Удаление объекта из БД
 void House::removeHouse(House*& database, int& count, const char* houseAddress) {
     int indexToRemove = -1;
     for (int i = 0; i < count; ++i) {
@@ -186,23 +182,21 @@ void House::removeHouse(House*& database, int& count, const char* houseAddress) 
     std::cout << "Дом: " << houseAddress << " удален." << std::endl;
 
     count--;
-    delete[] database; // Освобождаем память старого массива
-    database = newDatabase; // Обновляем указатель на новый массив
+    delete[] database;
+    database = newDatabase;
 }
 
-// Редактирование БД
 bool House::editHouse(House* database, int count, const char* houseAddress, const House& newHouseData) {
     for (int i = 0; i < count; ++i) {
         if (std::strcmp(database[i].getAddress(), houseAddress) == 0) {
-            database[i] = newHouseData;  // Заменяем данные дома
-            return true;                  // Успешно отредактировано
+            database[i] = newHouseData;
+            return true;
         }
     }
     std::cerr << "Дом с адресом " << houseAddress << " не найден." << std::endl;
-    return false; // Дом не найден
+    return false;
 }
 
-// Вывод БД на экран
 void House::printHouses(House* database, int count) {
     for (int i = 0; i < count; ++i) {
         std::cout << database[i] << std::endl;

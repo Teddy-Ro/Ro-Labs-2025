@@ -5,26 +5,21 @@
 
 class House {
  private:
-    char* address;       // Адрес дома (динамическая память)
-    int floors;          // Количество этажей
-    int apartments;      // Количество квартир
-    bool hasElevator;    // Наличие лифта
+    char* address;
+    int floors;
+    int apartments;
+    bool hasElevator;
 
  public:
-    // Конструкторы
     House();
     House(const char* addr, int f, int a, bool elevator);
 
-    // Деструктор
     ~House();
 
-    // Конструктор копирования
     House(const House& other);
 
-    // Оператор присваивания
     House& operator=(const House& other);
 
-    // Геттеры и сеттеры
     const char* getAddress() const;
     int getFloors() const;
     int getApartments() const;
@@ -35,16 +30,13 @@ class House {
     void setApartments(int a);
     void setHasElevator(bool elevator);
 
-    // Перегрузка операторов ввода/вывода
     friend std::ostream& operator<<(std::ostream& os, const House& house);
     friend std::istream& operator>>(std::istream& is, House& house);
 
-    // Перегрузка операторов сравнения
     bool operator<(const House& other) const;
     bool operator>(const House& other) const;
     bool operator==(const House& other) const;
 
-    // Статические методы для работы с базой данных
     static House* readFromFile(const char* filename, int& count);
     static void writeToFile(const char* filename, House* database, int count);
     static void sortHouses(House* database, int count);

@@ -29,10 +29,10 @@ Planet FillPlanetsParametrs() {
     int newSatellites;
     bool newHasLife;
 
-    std::cin.ignore();  // Очистка буфера от предыдущих символов новой строки
+    std::cin.ignore();
 
     std::cout << "Enter planet name: ";
-    std::cin.getline(newName, 100);  // Считываем имя планеты
+    std::cin.getline(newName, 100);
 
     std::cout << "Enter planet diameter: ";
     std::cin >> newDiameter;
@@ -45,7 +45,6 @@ Planet FillPlanetsParametrs() {
     std::cin >> lifeInput;
     newHasLife = lifeInput == 1;
 
-    // Очистка потока ввода после чтения целых чисел
     std::cin.ignore();
 
     Planet newPlanetData(newName, newDiameter, newSatellites, newHasLife);
@@ -74,8 +73,8 @@ int ChoicePlanetMethod() {
             }
         } else {
             std::cout << "Некорректный ввод. Пожалуйста, введите целое число.\n";
-            std::cin.clear();              // Очищаем флаг ошибки
-            std::cin.ignore(10000, '\n');  // Игнорируем оставшиеся символы в буфере
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
     }
 }
@@ -83,69 +82,63 @@ int ChoicePlanetMethod() {
 template<typename T>
 void switchPlanet(T* planets, int& count, const char* filename) {
     while (true) {
-        // Вывод меню
-
         switch (ChoicePlanetMethod()) {
-            case 1:  // Загрузка данных из файла
+            case 1:
                 loadDataFromFile(planets, count, filename);
                 break;
 
-            case 2:  // Сохранение данных в файл
+            case 2:
                 saveDataToFile(planets, count, filename);
                 break;
 
-            case 3:  // Добавление новой планеты
+            case 3:
                 addNewPlanet(planets, count);
                 break;
 
-            case 4:  // Удаление планеты
+            case 4:
                 removePlanet(planets, count);
                 break;
 
-            case 5:  // Редактирование данных о планете
+            case 5:
                 editPlanet(planets, count);
                 break;
 
-            case 6:  // Сортировка планет по диаметру
+            case 6:
                 sortPlanetsByDiameter(planets, count);
                 break;
 
-            case 7:  // Вывод всех планет на экран
+            case 7:
                 printAllPlanets(planets, count);
                 break;
 
-            case 8:                // Выход из программы
-                delete[] planets;  // Освобождение памяти
+            case 8:
+                delete[] planets;
                 std::cout << "Выход из программы.\n";
                 return;
 
-            default:  // Некорректный выбор
+            default:
                 std::cout << "Некорректный выбор. Попробуйте снова.\n";
                 break;
         }
     }
 }
 
-// Загрузка данных из файла
 void loadDataFromFile(Planet*& planets, int& count, const char* filename) {
     planets = Planet::readFromFile(filename, count);
     std::cout << "Данные загружены из файла.\n";
 }
 
-// Сохранение данных в файл
 void saveDataToFile(Planet* planets, int count, const char* filename) {
     Planet::writeToFile(filename, planets, count);
     std::cout << "Данные сохранены в файл.\n";
 }
 
-// Добавление новой планеты
 void addNewPlanet(Planet*& planets, int& count) {
     Planet newPlanet = FillPlanetsParametrs();
     Planet::addPlanet(planets, count, newPlanet);
     std::cout << "Планета добавлена.\n";
 }
 
-// Удаление планеты
 void removePlanet(Planet*& planets, int& count) {
     char name[100];
     std::cout << "Введите название планеты для удаления: ";
@@ -153,7 +146,6 @@ void removePlanet(Planet*& planets, int& count) {
     Planet::removePlanet(planets, count, name);
 }
 
-// Редактирование данных о планете
 void editPlanet(Planet* planets, int count) {
     char name[100];
     std::cout << "Введите название планеты для редактирования: ";
@@ -164,13 +156,11 @@ void editPlanet(Planet* planets, int count) {
     Planet::editPlanet(planets, count, name, newPlanetData);
 }
 
-// Сортировка планет по диаметру
 void sortPlanetsByDiameter(Planet* planets, int count) {
     Planet::sortPlanets(planets, count);
     std::cout << "Планеты отсортированы по диаметру.\n";
 }
 
-// Вывод всех планет на экран
 void printAllPlanets(Planet* planets, int count) {
     Planet::printPlanets(planets, count);
 }
@@ -199,8 +189,8 @@ int ChoiceHouseMethod() {
             }
         } else {
             std::cout << "Некорректный ввод. Пожалуйста, введите целое число.\n";
-            std::cin.clear();              // Очищаем флаг ошибки
-            std::cin.ignore(10000, '\n');  // Игнорируем оставшиеся символы в буфере
+            std::cin.clear();
+            std::cin.ignore(10000, '\n');
         }
     }
 }
@@ -208,69 +198,63 @@ int ChoiceHouseMethod() {
 template<typename T>
 void switchHouse(T* houses, int& count, const char* filename) {
     while (true) {
-        // Вывод меню
-
         switch (ChoiceHouseMethod()) {
-            case 1:  // Загрузка данных из файла
+            case 1:
                 loadDataFromFileHouse(houses, count, filename);
                 break;
 
-            case 2:  // Сохранение данных в файл
+            case 2:
                 saveDataToFileHouse(houses, count, filename);
                 break;
 
-            case 3:  // Добавление нового дома
+            case 3:
                 addNewHouse(houses, count);
                 break;
 
-            case 4:  // Удаление дома
+            case 4:
                 removeHouse(houses, count);
                 break;
 
-            case 5:  // Редактирование данных о доме
+            case 5:
                 editHouse(houses, count);
                 break;
 
-            case 6:  // Сортировка домов по количеству этажей
+            case 6:
                 sortHousesByFloors(houses, count);
                 break;
 
-            case 7:  // Вывод всех домов на экран
+            case 7:
                 printAllHouses(houses, count);
                 break;
 
-            case 8:                // Выход из программы
-                delete[] houses;  // Освобождение памяти
+            case 8:
+                delete[] houses;
                 std::cout << "Выход из программы.\n";
                 return;
 
-            default:  // Некорректный выбор
+            default:
                 std::cout << "Некорректный выбор. Попробуйте снова.\n";
                 break;
         }
     }
 }
 
-// Загрузка данных из файла
 void loadDataFromFileHouse(House*& houses, int& count, const char* filename) {
     houses = House::readFromFile(filename, count);
     std::cout << "Данные загружены из файла.\n";
 }
 
-// Сохранение данных в файл
 void saveDataToFileHouse(House* houses, int count, const char* filename) {
     House::writeToFile(filename, houses, count);
     std::cout << "Данные сохранены в файл.\n";
 }
 
-// Добавление нового дома
 void addNewHouse(House*& houses, int& count) {
     House newHouse = FillHouseParametrs();
     House::addHouse(houses, count, newHouse);
     std::cout << "Дом добавлен.\n";
 }
 
-// Удаление дома
 void removeHouse(House*& houses, int& count) {
     char addr[100];
     std::cout << "Введите адрес дома для удаления: ";
@@ -278,7 +262,6 @@ void removeHouse(House*& houses, int& count) {
     House::removeHouse(houses, count, addr);
 }
 
-// Редактирование данных о доме
 void editHouse(House* houses, int count) {
     char addr[100];
     std::cout << "Введите адрес дома для редактирования: ";
@@ -289,18 +272,15 @@ void editHouse(House* houses, int count) {
     House::editHouse(houses, count, addr, newHouseData);
 }
 
-// Сортировка домов по количеству этажей
 void sortHousesByFloors(House* houses, int count) {
     House::sortHouses(houses, count);
     std::cout << "Дома отсортированы по количеству этажей.\n";
 }
 
-// Вывод всех домов на экран
 void printAllHouses(House* houses, int count) {
     House::printHouses(houses, count);
 }
 
-// Функция для заполнения параметров дома
 House FillHouseParametrs() {
     char addr[100];
     std::cout << "Введите адрес дома: ";
@@ -320,6 +300,5 @@ House FillHouseParametrs() {
 
 }  // namespace houseSpace
 
-// Template Specializations
 template void planetSpace::switchPlanet<Planet>(Planet* planets, int& count, const char* filename);
 template void houseSpace::switchHouse<House>(House* houses, int& count, const char* filename);
