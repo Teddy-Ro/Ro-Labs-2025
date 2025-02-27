@@ -65,17 +65,35 @@ CMAKE_BINARY_DIR = /home/ted/BMSTUproga/Ro-Labs-2025/build
 # The main recursive "all" target.
 all: CMakeFiles/lab2.dir/all
 all: planet/all
+all: house/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: planet/preinstall
+preinstall: house/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/lab2.dir/clean
 clean: CMakeFiles/clang-format.dir/clean
 clean: planet/clean
+clean: house/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory house
+
+# Recursive "all" directory target.
+house/all: house/CMakeFiles/house.dir/all
+.PHONY : house/all
+
+# Recursive "preinstall" directory target.
+house/preinstall:
+.PHONY : house/preinstall
+
+# Recursive "clean" directory target.
+house/clean: house/CMakeFiles/house.dir/clean
+.PHONY : house/clean
 
 #=============================================================================
 # Directory level rules for directory planet
@@ -97,14 +115,15 @@ planet/clean: planet/CMakeFiles/planet.dir/clean
 
 # All Build rule for target.
 CMakeFiles/lab2.dir/all: planet/CMakeFiles/planet.dir/all
+CMakeFiles/lab2.dir/all: house/CMakeFiles/house.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2,3 "Built target lab2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=3,4,5 "Built target lab2"
 .PHONY : CMakeFiles/lab2.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lab2.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
 .PHONY : CMakeFiles/lab2.dir/rule
@@ -151,7 +170,7 @@ CMakeFiles/clang-format.dir/clean:
 planet/CMakeFiles/planet.dir/all:
 	$(MAKE) $(MAKESILENT) -f planet/CMakeFiles/planet.dir/build.make planet/CMakeFiles/planet.dir/depend
 	$(MAKE) $(MAKESILENT) -f planet/CMakeFiles/planet.dir/build.make planet/CMakeFiles/planet.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=4,5 "Built target planet"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=6,7 "Built target planet"
 .PHONY : planet/CMakeFiles/planet.dir/all
 
 # Build rule for subdir invocation for target.
@@ -169,6 +188,32 @@ planet: planet/CMakeFiles/planet.dir/rule
 planet/CMakeFiles/planet.dir/clean:
 	$(MAKE) $(MAKESILENT) -f planet/CMakeFiles/planet.dir/build.make planet/CMakeFiles/planet.dir/clean
 .PHONY : planet/CMakeFiles/planet.dir/clean
+
+#=============================================================================
+# Target rules for target house/CMakeFiles/house.dir
+
+# All Build rule for target.
+house/CMakeFiles/house.dir/all:
+	$(MAKE) $(MAKESILENT) -f house/CMakeFiles/house.dir/build.make house/CMakeFiles/house.dir/depend
+	$(MAKE) $(MAKESILENT) -f house/CMakeFiles/house.dir/build.make house/CMakeFiles/house.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2 "Built target house"
+.PHONY : house/CMakeFiles/house.dir/all
+
+# Build rule for subdir invocation for target.
+house/CMakeFiles/house.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 house/CMakeFiles/house.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
+.PHONY : house/CMakeFiles/house.dir/rule
+
+# Convenience name for target.
+house: house/CMakeFiles/house.dir/rule
+.PHONY : house
+
+# clean rule for target.
+house/CMakeFiles/house.dir/clean:
+	$(MAKE) $(MAKESILENT) -f house/CMakeFiles/house.dir/build.make house/CMakeFiles/house.dir/clean
+.PHONY : house/CMakeFiles/house.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

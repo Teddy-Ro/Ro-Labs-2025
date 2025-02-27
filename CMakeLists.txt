@@ -10,6 +10,7 @@ set(SOURCES
 )
 
 add_subdirectory(planet)
+add_subdirectory(house)
 
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
@@ -22,6 +23,7 @@ if(ENABLE_DEBUG)
 endif()
 
 target_link_libraries(${CMAKE_PROJECT_NAME} planet)
+target_link_libraries(${CMAKE_PROJECT_NAME} house)
 
 add_custom_target(
     clang-format

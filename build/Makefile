@@ -155,6 +155,19 @@ planet/fast:
 	$(MAKE) $(MAKESILENT) -f planet/CMakeFiles/planet.dir/build.make planet/CMakeFiles/planet.dir/build
 .PHONY : planet/fast
 
+#=============================================================================
+# Target rules for targets named house
+
+# Build rule for target.
+house: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 house
+.PHONY : house
+
+# fast build rule for target.
+house/fast:
+	$(MAKE) $(MAKESILENT) -f house/CMakeFiles/house.dir/build.make house/CMakeFiles/house.dir/build
+.PHONY : house/fast
+
 main_planet.o: main_planet.cpp.o
 .PHONY : main_planet.o
 
@@ -212,6 +225,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... clang-format"
+	@echo "... house"
 	@echo "... lab2"
 	@echo "... planet"
 	@echo "... main_planet.o"

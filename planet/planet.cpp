@@ -1,4 +1,3 @@
-#include <algorithm>  // для сортировки
 #include <cstring>    // для работы с char*
 #include <fstream>
 #include <iostream>

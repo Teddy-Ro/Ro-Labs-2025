@@ -1,0 +1,2 @@
+/usr/bin/ar qc libhouse.a CMakeFiles/house.dir/house.cpp.o
+/usr/bin/ranlib libhouse.a

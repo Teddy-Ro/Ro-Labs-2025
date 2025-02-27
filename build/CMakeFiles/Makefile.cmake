@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
+  "/home/ted/BMSTUproga/Ro-Labs-2025/house/CMakeLists.txt"
   "/home/ted/BMSTUproga/Ro-Labs-2025/planet/CMakeLists.txt"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
@@ -42,6 +43,7 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "planet/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "house/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -49,4 +51,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lab2.dir/DependInfo.cmake"
   "CMakeFiles/clang-format.dir/DependInfo.cmake"
   "planet/CMakeFiles/planet.dir/DependInfo.cmake"
+  "house/CMakeFiles/house.dir/DependInfo.cmake"
   )

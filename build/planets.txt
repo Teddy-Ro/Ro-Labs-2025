@@ -1,8 +1,8 @@
 8
-Korsar 70 1 1
+Earth 1774 1 0
 Mercury 4878 0 0
+Korsar 7000 1 1
 Venus 12104 0 0
-Earth 12774 1 0
 Neptune 49600 2 0
 Uranus 51108 5 1
 Saturn 120000 17 0
