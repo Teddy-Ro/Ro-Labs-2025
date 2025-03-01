@@ -117,17 +117,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab2
+# Target rules for targets named lab3
 
 # Build rule for target.
-lab2: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab2
-.PHONY : lab2
+lab3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab3
+.PHONY : lab3
 
 # fast build rule for target.
-lab2/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/build
-.PHONY : lab2/fast
+lab3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/build
+.PHONY : lab3/fast
 
 #=============================================================================
 # Target rules for targets named clang-format
@@ -142,79 +142,29 @@ clang-format/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/build
 .PHONY : clang-format/fast
 
-#=============================================================================
-# Target rules for targets named planet
-
-# Build rule for target.
-planet: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 planet
-.PHONY : planet
-
-# fast build rule for target.
-planet/fast:
-	$(MAKE) $(MAKESILENT) -f planet/CMakeFiles/planet.dir/build.make planet/CMakeFiles/planet.dir/build
-.PHONY : planet/fast
-
-#=============================================================================
-# Target rules for targets named house
-
-# Build rule for target.
-house: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 house
-.PHONY : house
-
-# fast build rule for target.
-house/fast:
-	$(MAKE) $(MAKESILENT) -f house/CMakeFiles/house.dir/build.make house/CMakeFiles/house.dir/build
-.PHONY : house/fast
-
-main_planet.o: main_planet.cpp.o
-.PHONY : main_planet.o
+main_l3.o: main_l3.cpp.o
+.PHONY : main_l3.o
 
 # target to build an object file
-main_planet.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/main_planet.cpp.o
-.PHONY : main_planet.cpp.o
+main_l3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main_l3.cpp.o
+.PHONY : main_l3.cpp.o
 
-main_planet.i: main_planet.cpp.i
-.PHONY : main_planet.i
-
-# target to preprocess a source file
-main_planet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/main_planet.cpp.i
-.PHONY : main_planet.cpp.i
-
-main_planet.s: main_planet.cpp.s
-.PHONY : main_planet.s
-
-# target to generate assembly for a file
-main_planet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/main_planet.cpp.s
-.PHONY : main_planet.cpp.s
-
-planetLogic.o: planetLogic.cpp.o
-.PHONY : planetLogic.o
-
-# target to build an object file
-planetLogic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/planetLogic.cpp.o
-.PHONY : planetLogic.cpp.o
-
-planetLogic.i: planetLogic.cpp.i
-.PHONY : planetLogic.i
+main_l3.i: main_l3.cpp.i
+.PHONY : main_l3.i
 
 # target to preprocess a source file
-planetLogic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/planetLogic.cpp.i
-.PHONY : planetLogic.cpp.i
+main_l3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main_l3.cpp.i
+.PHONY : main_l3.cpp.i
 
-planetLogic.s: planetLogic.cpp.s
-.PHONY : planetLogic.s
+main_l3.s: main_l3.cpp.s
+.PHONY : main_l3.s
 
 # target to generate assembly for a file
-planetLogic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab2.dir/build.make CMakeFiles/lab2.dir/planetLogic.cpp.s
-.PHONY : planetLogic.cpp.s
+main_l3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/main_l3.cpp.s
+.PHONY : main_l3.cpp.s
 
 # Help Target
 help:
@@ -225,15 +175,10 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... clang-format"
-	@echo "... house"
-	@echo "... lab2"
-	@echo "... planet"
-	@echo "... main_planet.o"
-	@echo "... main_planet.i"
-	@echo "... main_planet.s"
-	@echo "... planetLogic.o"
-	@echo "... planetLogic.i"
-	@echo "... planetLogic.s"
+	@echo "... lab3"
+	@echo "... main_l3.o"
+	@echo "... main_l3.i"
+	@echo "... main_l3.s"
 .PHONY : help
 
 

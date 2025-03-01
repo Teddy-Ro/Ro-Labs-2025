@@ -1,16 +1,14 @@
 cmake_minimum_required(VERSION 3.23)
-project(lab2)
+project(lab3)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
 set(SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/main_planet.cpp
-    ${CMAKE_CURRENT_SOURCE_DIR}/planetLogic.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/main_l3.cpp
 )
 
-add_subdirectory(planet)
-add_subdirectory(house)
+
 
 add_executable(${CMAKE_PROJECT_NAME} ${SOURCES})
 
@@ -21,9 +19,6 @@ target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -Wall -Wextra -Werror -Wped
 if(ENABLE_DEBUG)
     target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE -g)
 endif()
-
-target_link_libraries(${CMAKE_PROJECT_NAME} planet)
-target_link_libraries(${CMAKE_PROJECT_NAME} house)
 
 add_custom_target(
     clang-format
