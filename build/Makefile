@@ -142,6 +142,30 @@ clang-format/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/build
 .PHONY : clang-format/fast
 
+fraction.o: fraction.cpp.o
+.PHONY : fraction.o
+
+# target to build an object file
+fraction.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/fraction.cpp.o
+.PHONY : fraction.cpp.o
+
+fraction.i: fraction.cpp.i
+.PHONY : fraction.i
+
+# target to preprocess a source file
+fraction.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/fraction.cpp.i
+.PHONY : fraction.cpp.i
+
+fraction.s: fraction.cpp.s
+.PHONY : fraction.s
+
+# target to generate assembly for a file
+fraction.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/fraction.cpp.s
+.PHONY : fraction.cpp.s
+
 main_l3.o: main_l3.cpp.o
 .PHONY : main_l3.o
 
@@ -176,6 +200,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... clang-format"
 	@echo "... lab3"
+	@echo "... fraction.o"
+	@echo "... fraction.i"
+	@echo "... fraction.s"
 	@echo "... main_l3.o"
 	@echo "... main_l3.i"
 	@echo "... main_l3.s"

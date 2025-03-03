@@ -527,3 +527,85 @@ events:
       
       
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:99 (CHECK_CXX_SOURCE_COMPILES)"
+      - "/usr/share/cmake-3.28/Modules/FindThreads.cmake:163 (_threads_check_libc)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake:33 (find_dependency)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake:24 (_qt_internal_find_third_party_dependencies)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake:122 (include)"
+      - "CMakeLists.txt:15 (find_package)"
+    checks:
+      - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
+    directories:
+      source: "/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-0jCToG"
+      binary: "/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-0jCToG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/Qt6;/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "CMAKE_HAVE_LIBC_PTHREAD"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-0jCToG'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_bf617/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_bf617.dir/build.make CMakeFiles/cmTC_bf617.dir/build
+        gmake[1]: Entering directory '/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-0jCToG'
+        Building CXX object CMakeFiles/cmTC_bf617.dir/src.cxx.o
+        /usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD  -std=gnu++17 -o CMakeFiles/cmTC_bf617.dir/src.cxx.o -c /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-0jCToG/src.cxx
+        Linking CXX executable cmTC_bf617
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bf617.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_bf617.dir/src.cxx.o -o cmTC_bf617 
+        gmake[1]: Leaving directory '/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-0jCToG'
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake:33 (check_cxx_source_compiles)"
+      - "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake:76 (find_package)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake:33 (find_dependency)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake:30 (_qt_internal_find_third_party_dependencies)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake:50 (include)"
+      - "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake:167 (find_package)"
+      - "CMakeLists.txt:15 (find_package)"
+    checks:
+      - "Performing Test HAVE_STDATOMIC"
+    directories:
+      source: "/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-N2SBiJ"
+      binary: "/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-N2SBiJ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "/usr/lib/x86_64-linux-gnu/cmake/Qt6;/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/extra-cmake-modules/find-modules;/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin"
+    buildResult:
+      variable: "HAVE_STDATOMIC"
+      cached: true
+      stdout: |
+        Change Dir: '/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-N2SBiJ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_9ab58/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_9ab58.dir/build.make CMakeFiles/cmTC_9ab58.dir/build
+        gmake[1]: Entering directory '/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-N2SBiJ'
+        Building CXX object CMakeFiles/cmTC_9ab58.dir/src.cxx.o
+        /usr/bin/c++ -DHAVE_STDATOMIC  -std=gnu++17 -o CMakeFiles/cmTC_9ab58.dir/src.cxx.o -c /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-N2SBiJ/src.cxx
+        Linking CXX executable cmTC_9ab58
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ab58.dir/link.txt --verbose=1
+        /usr/bin/c++ CMakeFiles/cmTC_9ab58.dir/src.cxx.o -o cmTC_9ab58 
+        gmake[1]: Leaving directory '/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/CMakeScratch/TryCompile-N2SBiJ'
+        
+      exitCode: 0
+...

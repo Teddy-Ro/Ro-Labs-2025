@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/lab3.dir/main_l3.cpp.o -o lab3 
+/usr/bin/c++ CMakeFiles/lab3.dir/main_l3.cpp.o CMakeFiles/lab3.dir/fraction.cpp.o -o lab3 

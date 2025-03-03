@@ -8,8 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ted/BMSTUproga/Ro-Labs-2025/fraction.cpp" "CMakeFiles/lab3.dir/fraction.cpp.o" "gcc" "CMakeFiles/lab3.dir/fraction.cpp.o.d"
-  "/home/ted/BMSTUproga/Ro-Labs-2025/main_l3.cpp" "CMakeFiles/lab3.dir/main_l3.cpp.o" "gcc" "CMakeFiles/lab3.dir/main_l3.cpp.o.d"
+  "" "lab3_autogen/timestamp" "custom" "lab3_autogen/deps"
   )
 
 # Targets to which this target links which contain Fortran sources.
