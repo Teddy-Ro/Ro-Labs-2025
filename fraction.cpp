@@ -4,7 +4,7 @@
 #include <iostream>
 #include <sstream>
 
-const int N_DEC = 4;  // Default precision for double conversion
+int N_DEC = 4;  // Default precision for double conversion
 
 int Fraction::gcd(int a, int b) {
     a = abs(a);
@@ -28,13 +28,11 @@ void Fraction::simplify() {
 }
 
 Fraction::Fraction() : numerator(0), denominator(1), integerPart(0), isNegative(false) {
-    std::cout << "Fraction()\n";
 }
 
 Fraction::Fraction(int numerator, int denominator) : integerPart(0), isNegative(false) {
-    std::cout << "Fraction(int, int)\n";
     if (denominator == 0) {
-        std::cerr << "Error: Denominator cannot be zero.\n";
+        std::cerr << "знаменатель не может быть 0.\n";
         this->numerator = 0;
         this->denominator = 1;
         return;
@@ -59,8 +57,6 @@ Fraction::Fraction(const char* str) : numerator(0), denominator(1), integerPart(
     if (str[0] == '-') {
         sign = -1;
         ss.ignore();
-    } else if (str[0] == '+') {
-        ss.ignore();
     }
 
     if (strchr(str, '/')) {
@@ -77,19 +73,17 @@ Fraction::Fraction(const char* str) : numerator(0), denominator(1), integerPart(
     } else {
         ss >> integer;
     }
-
     integer *= sign;
     num *= sign;
 
     this->integerPart = integer;
-    this->numerator = num + std::abs(integer) * den;
+    this->numerator = num;
     this->denominator = den;
     this->isNegative = integer < 0 || num < 0;
     simplify();
 }
 
 Fraction::Fraction(double value) : numerator(0), denominator(1), integerPart(0), isNegative(false) {
-    std::cout << "Fraction(double)\n";
     isNegative = value < 0;
     value = std::abs(value);
     integerPart = static_cast<int>(value);
@@ -100,9 +94,11 @@ Fraction::Fraction(double value) : numerator(0), denominator(1), integerPart(0),
     denominator = static_cast<int>(precision);
 
     if (isNegative) {
+        integerPart = -integerPart;
         numerator = -numerator;
     }
     simplify();
+
 }
 
 int Fraction::getNumerator() const {
