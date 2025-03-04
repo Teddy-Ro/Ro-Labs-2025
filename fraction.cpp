@@ -122,7 +122,6 @@ bool Fraction::getIsNegative() const {
 }
 
 Fraction& Fraction::operator+=(const Fraction& other) {
-    std::cout << "operator+=(Fraction)\n";
     numerator = numerator * other.denominator + other.numerator * denominator;
     denominator *= other.denominator;
     simplify();
@@ -130,47 +129,40 @@ Fraction& Fraction::operator+=(const Fraction& other) {
 }
 
 Fraction& Fraction::operator+=(double value) {
-    std::cout << "operator+=(double)\n";
     Fraction other(value);
     *this += other;
     return *this;
 }
 
 Fraction& Fraction::operator+=(int value) {
-    std::cout << "operator+=(int)\n";
     numerator += value * denominator;
     simplify();
     return *this;
 }
 
 Fraction Fraction::operator+(const Fraction& other) const {
-    std::cout << "operator+(Fraction)\n";
     Fraction result = *this;
     result += other;
     return result;
 }
 
 Fraction Fraction::operator+(double value) const {
-    std::cout << "operator+(double)\n";
     Fraction other(value);
     return *this + other;
 }
 
 Fraction Fraction::operator+(int value) const {
-    std::cout << "operator+(int)\n";
     Fraction result = *this;
     result += value;
     return result;
 }
 
 Fraction operator+(double value, const Fraction& fraction) {
-    std::cout << "friend operator+(double, Fraction)\n";
     Fraction other(value);
     return other + fraction;
 }
 
 Fraction operator+(int value, const Fraction& fraction) {
-    std::cout << "friend operator+(int, Fraction)\n";
     Fraction result(value, 1);
     return result + fraction;
 }
