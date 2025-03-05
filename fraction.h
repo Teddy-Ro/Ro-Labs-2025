@@ -7,10 +7,9 @@ class Fraction {
  private:
     int numerator;
     int denominator;
-    int integerPart;
-    bool isNegative;
 
     void simplify();
+    void simplify(int&, int&);
     int gcd(int a, int b);
 
  public:
@@ -21,7 +20,6 @@ class Fraction {
 
     int getNumerator() const;
     int getDenominator() const;
-    int getIntegerPart() const;
     bool getIsNegative() const;
 
     Fraction& operator+=(const Fraction& other);

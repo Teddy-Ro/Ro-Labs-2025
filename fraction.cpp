@@ -3,8 +3,9 @@
 #include <cstring>
 #include <iostream>
 #include <sstream>
+#include <stdexcept>
 
-int N_DEC = 4;  // Default precision for double conversion
+int N_DEC = 4;
 
 int Fraction::gcd(int a, int b) {
     a = abs(a);
@@ -27,15 +28,24 @@ void Fraction::simplify() {
     }
 }
 
-Fraction::Fraction() : numerator(0), denominator(1), integerPart(0), isNegative(false) {
+void Fraction::simplify(int& numerator, int& denominator) {
+    int common = gcd(numerator, denominator);
+    numerator /= common;
+    denominator /= common;
+
+    if (denominator < 0) {
+        numerator = -numerator;
+        denominator = -denominator;
+    }
 }
 
-Fraction::Fraction(int numerator, int denominator) : integerPart(0), isNegative(false) {
+Fraction::Fraction() : numerator(0), denominator(1) {
+}
+
+Fraction::Fraction(int numerator, int denominator) {
     if (denominator == 0) {
-        std::cerr << "знаменатель не может быть 0.\n";
-        this->numerator = 0;
-        this->denominator = 1;
-        return;
+        std::cerr << "denominator cannot be 0\n";
+        throw std::invalid_argument("denominator cannot be 0");
     }
 
     if (denominator < 0) {
@@ -47,18 +57,12 @@ Fraction::Fraction(int numerator, int denominator) : integerPart(0), isNegative(
     simplify();
 }
 
-Fraction::Fraction(const char* str) : numerator(0), denominator(1), integerPart(0), isNegative(false) {
-    int sign = 1;
-    int integer = 0;
+Fraction::Fraction(const char* str) : numerator(0), denominator(1) {
+    double integer = 0;
     int num = 0;
     int den = 1;
 
     std::stringstream ss(str);
-    if (str[0] == '-') {
-        sign = -1;
-        ss.ignore();
-    }
-
     if (strchr(str, '/')) {
         if (strchr(str, ' ')) {
             ss >> integer;
@@ -73,32 +77,36 @@ Fraction::Fraction(const char* str) : numerator(0), denominator(1), integerPart(
     } else {
         ss >> integer;
     }
-    integer *= sign;
-    num *= sign;
 
-    this->integerPart = integer;
-    this->numerator = num;
-    this->denominator = den;
-    this->isNegative = integer < 0 || num < 0;
+    if (std::fmod(integer, 1.0) != 0.0) {
+        Fraction doub(integer);
+        numerator = doub.numerator;
+        denominator = doub.denominator;
+        return;
+
+    }
+
+    if (den == 0) {
+        throw std::invalid_argument("denominator cannot be 0");
+        den = 1;
+    }
+
+    simplify(num, den);
+
+    if (integer < 0){
+        numerator = integer * den - std::abs(num);
+    } else {
+        numerator = integer * den + num;
+    }
+    denominator = den;
     simplify();
 }
 
-Fraction::Fraction(double value) : numerator(0), denominator(1), integerPart(0), isNegative(false) {
-    isNegative = value < 0;
-    value = std::abs(value);
-    integerPart = static_cast<int>(value);
-    value -= integerPart;
-
+Fraction::Fraction(double value) : numerator(0), denominator(1) {
     double precision = pow(10, N_DEC);
     numerator = static_cast<int>(round(value * precision));
     denominator = static_cast<int>(precision);
-
-    if (isNegative) {
-        integerPart = -integerPart;
-        numerator = -numerator;
-    }
     simplify();
-
 }
 
 int Fraction::getNumerator() const {
@@ -107,14 +115,6 @@ int Fraction::getNumerator() const {
 
 int Fraction::getDenominator() const {
     return denominator;
-}
-
-int Fraction::getIntegerPart() const {
-    return integerPart;
-}
-
-bool Fraction::getIsNegative() const {
-    return isNegative;
 }
 
 Fraction& Fraction::operator+=(const Fraction& other) {
@@ -169,26 +169,24 @@ std::istream& operator>>(std::istream& in, Fraction& fraction) {
     Fraction temp(buffer);
     fraction.numerator = temp.numerator;
     fraction.denominator = temp.denominator;
-    fraction.integerPart = temp.integerPart;
-    fraction.isNegative = temp.isNegative;
     fraction.simplify();
     return in;
 }
 
 std::ostream& operator<<(std::ostream& out, const Fraction& fraction) {
-    int integerPart = fraction.numerator / fraction.denominator;
-    int numerator = fraction.numerator % fraction.denominator;
+    int numerator = fraction.numerator;
+    int denominator = fraction.denominator;
 
-    if (fraction.numerator == 0) {
+    if (numerator == 0) {
         out << 0;
-    } else if (numerator == 0) {
-        out << integerPart;
+    } else if (denominator == 1) {
+        out << numerator;
+    } else if (std::abs(numerator) < denominator) {
+        out << numerator << "/" << denominator;
     } else {
-        if (integerPart != 0) {
-            out << integerPart << " " << abs(numerator) << "/" << fraction.denominator;
-        } else {
-            out << numerator << "/" << fraction.denominator;
-        }
+        int integerPart = numerator / denominator;
+        int num = numerator % denominator;
+        out << integerPart << " " << std::abs(num) << "/" << denominator;
     }
     return out;
 }
