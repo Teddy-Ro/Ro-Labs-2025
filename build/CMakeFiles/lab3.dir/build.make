@@ -69,44 +69,44 @@ include CMakeFiles/lab3.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab3.dir/flags.make
 
-CMakeFiles/lab3.dir/main_l3.cpp.o: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/main_l3.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l3.cpp
-CMakeFiles/lab3.dir/main_l3.cpp.o: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab3.dir/main_l3.cpp.o"
-	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/main_l3.cpp -- /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/main_l3.cpp.o -MF CMakeFiles/lab3.dir/main_l3.cpp.o.d -o CMakeFiles/lab3.dir/main_l3.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l3.cpp
+CMakeFiles/lab3.dir/main_l4.cpp.o: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
+CMakeFiles/lab3.dir/main_l4.cpp.o: CMakeFiles/lab3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab3.dir/main_l4.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp -- /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/main_l4.cpp.o -MF CMakeFiles/lab3.dir/main_l4.cpp.o.d -o CMakeFiles/lab3.dir/main_l4.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
-CMakeFiles/lab3.dir/main_l3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/main_l3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/main_l3.cpp > CMakeFiles/lab3.dir/main_l3.cpp.i
+CMakeFiles/lab3.dir/main_l4.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/main_l4.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp > CMakeFiles/lab3.dir/main_l4.cpp.i
 
-CMakeFiles/lab3.dir/main_l3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/main_l3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/main_l3.cpp -o CMakeFiles/lab3.dir/main_l3.cpp.s
+CMakeFiles/lab3.dir/main_l4.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/main_l4.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp -o CMakeFiles/lab3.dir/main_l4.cpp.s
 
-CMakeFiles/lab3.dir/fraction.cpp.o: CMakeFiles/lab3.dir/flags.make
-CMakeFiles/lab3.dir/fraction.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/fraction.cpp
-CMakeFiles/lab3.dir/fraction.cpp.o: CMakeFiles/lab3.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab3.dir/fraction.cpp.o"
-	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/fraction.cpp -- /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/fraction.cpp.o -MF CMakeFiles/lab3.dir/fraction.cpp.o.d -o CMakeFiles/lab3.dir/fraction.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/fraction.cpp
+CMakeFiles/lab3.dir/stack.cpp.o: CMakeFiles/lab3.dir/flags.make
+CMakeFiles/lab3.dir/stack.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/stack.cpp
+CMakeFiles/lab3.dir/stack.cpp.o: CMakeFiles/lab3.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab3.dir/stack.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/stack.cpp -- /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab3.dir/stack.cpp.o -MF CMakeFiles/lab3.dir/stack.cpp.o.d -o CMakeFiles/lab3.dir/stack.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/stack.cpp
 
-CMakeFiles/lab3.dir/fraction.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/fraction.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/fraction.cpp > CMakeFiles/lab3.dir/fraction.cpp.i
+CMakeFiles/lab3.dir/stack.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab3.dir/stack.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/stack.cpp > CMakeFiles/lab3.dir/stack.cpp.i
 
-CMakeFiles/lab3.dir/fraction.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/fraction.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/fraction.cpp -o CMakeFiles/lab3.dir/fraction.cpp.s
+CMakeFiles/lab3.dir/stack.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab3.dir/stack.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/stack.cpp -o CMakeFiles/lab3.dir/stack.cpp.s
 
 # Object files for target lab3
 lab3_OBJECTS = \
-"CMakeFiles/lab3.dir/main_l3.cpp.o" \
-"CMakeFiles/lab3.dir/fraction.cpp.o"
+"CMakeFiles/lab3.dir/main_l4.cpp.o" \
+"CMakeFiles/lab3.dir/stack.cpp.o"
 
 # External object files for target lab3
 lab3_EXTERNAL_OBJECTS =
 
-lab3: CMakeFiles/lab3.dir/main_l3.cpp.o
-lab3: CMakeFiles/lab3.dir/fraction.cpp.o
+lab3: CMakeFiles/lab3.dir/main_l4.cpp.o
+lab3: CMakeFiles/lab3.dir/stack.cpp.o
 lab3: CMakeFiles/lab3.dir/build.make
 lab3: CMakeFiles/lab3.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable lab3"

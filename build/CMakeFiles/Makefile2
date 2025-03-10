@@ -63,43 +63,60 @@ CMAKE_BINARY_DIR = /home/ted/BMSTUproga/Ro-Labs-2025/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lab3.dir/all
+all: CMakeFiles/lab4.dir/all
+all: stack/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: stack/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lab3.dir/clean
+clean: CMakeFiles/lab4.dir/clean
 clean: CMakeFiles/clang-format.dir/clean
+clean: stack/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lab3.dir
+# Directory level rules for directory stack
+
+# Recursive "all" directory target.
+stack/all: stack/CMakeFiles/stack.dir/all
+.PHONY : stack/all
+
+# Recursive "preinstall" directory target.
+stack/preinstall:
+.PHONY : stack/preinstall
+
+# Recursive "clean" directory target.
+stack/clean: stack/CMakeFiles/stack.dir/clean
+.PHONY : stack/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/lab4.dir
 
 # All Build rule for target.
-CMakeFiles/lab3.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2,3 "Built target lab3"
-.PHONY : CMakeFiles/lab3.dir/all
+CMakeFiles/lab4.dir/all: stack/CMakeFiles/stack.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2 "Built target lab4"
+.PHONY : CMakeFiles/lab4.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lab3.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab3.dir/all
+CMakeFiles/lab4.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab4.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
-.PHONY : CMakeFiles/lab3.dir/rule
+.PHONY : CMakeFiles/lab4.dir/rule
 
 # Convenience name for target.
-lab3: CMakeFiles/lab3.dir/rule
-.PHONY : lab3
+lab4: CMakeFiles/lab4.dir/rule
+.PHONY : lab4
 
 # clean rule for target.
-CMakeFiles/lab3.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab3.dir/build.make CMakeFiles/lab3.dir/clean
-.PHONY : CMakeFiles/lab3.dir/clean
+CMakeFiles/lab4.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/clean
+.PHONY : CMakeFiles/lab4.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/clang-format.dir
@@ -126,6 +143,32 @@ clang-format: CMakeFiles/clang-format.dir/rule
 CMakeFiles/clang-format.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/clean
 .PHONY : CMakeFiles/clang-format.dir/clean
+
+#=============================================================================
+# Target rules for target stack/CMakeFiles/stack.dir
+
+# All Build rule for target.
+stack/CMakeFiles/stack.dir/all:
+	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/depend
+	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=3,4 "Built target stack"
+.PHONY : stack/CMakeFiles/stack.dir/all
+
+# Build rule for subdir invocation for target.
+stack/CMakeFiles/stack.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/CMakeFiles/stack.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
+.PHONY : stack/CMakeFiles/stack.dir/rule
+
+# Convenience name for target.
+stack: stack/CMakeFiles/stack.dir/rule
+.PHONY : stack
+
+# clean rule for target.
+stack/CMakeFiles/stack.dir/clean:
+	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/clean
+.PHONY : stack/CMakeFiles/stack.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
