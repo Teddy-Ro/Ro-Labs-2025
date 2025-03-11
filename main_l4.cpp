@@ -24,7 +24,6 @@ int main() {
     std::cout << number << "=";
     MyStack<int> invertStack;
 
-    // Вывод по убыванию
     while (!stack.empty()) {
         int factor = stack.top_inf();
         std::cout << factor;
@@ -33,7 +32,6 @@ int main() {
         std::cout << ((stack.empty()) ? "\n" : " * ");
     }
 
-    // Вывод по возрастанию
     std::cout << number << "=";
     while (!invertStack.empty()) {
         std::cout << invertStack.top_inf();
@@ -42,3 +40,4 @@ int main() {
     }
     return 0;
 }
+//доп задание: новый стек с чарами, оператор присваивание стека, перегрузка копирования, перегрузка вывода стека

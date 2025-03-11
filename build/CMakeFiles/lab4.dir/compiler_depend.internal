@@ -3,7 +3,7 @@
 
 CMakeFiles/lab4.dir/main_l4.cpp.o
  /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
- /home/ted/BMSTUproga/Ro-Labs-2025/stack.h
+ /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.h
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h
  /usr/include/asm-generic/errno.h
