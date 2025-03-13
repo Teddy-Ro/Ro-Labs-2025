@@ -6,8 +6,10 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \
+  /usr/include/c++/13/algorithm \
   /usr/include/c++/13/backward/binders.h \
   /usr/include/c++/13/bit \
+  /usr/include/c++/13/bits/algorithmfwd.h \
   /usr/include/c++/13/bits/alloc_traits.h \
   /usr/include/c++/13/bits/allocator.h \
   /usr/include/c++/13/bits/basic_ios.h \
@@ -47,23 +49,29 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
   /usr/include/c++/13/bits/range_access.h \
+  /usr/include/c++/13/bits/ranges_algo.h \
+  /usr/include/c++/13/bits/ranges_algobase.h \
   /usr/include/c++/13/bits/ranges_base.h \
   /usr/include/c++/13/bits/ranges_cmp.h \
   /usr/include/c++/13/bits/ranges_util.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
   /usr/include/c++/13/bits/std_abs.h \
+  /usr/include/c++/13/bits/stl_algo.h \
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_construct.h \
   /usr/include/c++/13/bits/stl_function.h \
+  /usr/include/c++/13/bits/stl_heap.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_tempbuf.h \
   /usr/include/c++/13/bits/streambuf.tcc \
   /usr/include/c++/13/bits/streambuf_iterator.h \
   /usr/include/c++/13/bits/string_view.tcc \
   /usr/include/c++/13/bits/stringfwd.h \
+  /usr/include/c++/13/bits/uniform_int_dist.h \
   /usr/include/c++/13/bits/uses_allocator.h \
   /usr/include/c++/13/bits/uses_allocator_args.h \
   /usr/include/c++/13/bits/utility.h \
@@ -93,6 +101,8 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/ostream \
+  /usr/include/c++/13/pstl/execution_defs.h \
+  /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
@@ -230,8 +240,6 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
-
 /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
@@ -278,31 +286,37 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+/usr/include/x86_64-linux-gnu/bits/locale.h:
 
-/usr/include/c++/13/compare:
+/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
+
+/usr/include/x86_64-linux-gnu/gnu/stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
+
+/usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
 
 /usr/include/c++/13/bits/stl_algobase.h:
-
-/usr/include/c++/13/bits/stl_construct.h:
-
-/home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
 
 /usr/include/c++/13/bits/refwrap.h:
 
+/home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp:
+
+/usr/include/c++/13/bits/stl_construct.h:
+
+/usr/include/c++/13/bits/ranges_algobase.h:
+
 /usr/include/c++/13/debug/debug.h:
 
 /usr/include/c++/13/stdexcept:
-
-/usr/include/c++/13/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
-
-/usr/include/c++/13/cstddef:
 
 /usr/include/c++/13/bits/invoke.h:
 
@@ -314,15 +328,7 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/ctype.h:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
-
-/usr/include/c++/13/bits/ptr_traits.h:
-
-/usr/include/alloca.h:
-
-/usr/include/c++/13/bits/stl_iterator_base_types.h:
+/usr/include/c++/13/bits/iterator_concepts.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
@@ -332,11 +338,15 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/bits/ios_base.h:
 
-/usr/include/c++/13/bits/move.h:
+/usr/include/x86_64-linux-gnu/bits/time64.h:
 
-/usr/include/c++/13/bits/basic_string.tcc:
+/usr/include/c++/13/bits/basic_ios.h:
 
-/usr/include/c++/13/bit:
+/usr/include/c++/13/bits/nested_exception.h:
+
+/usr/include/c++/13/bits/memory_resource.h:
+
+/usr/include/wchar.h:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
 
@@ -352,11 +362,15 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/backward/binders.h:
 
-/usr/include/c++/13/bits/stringfwd.h:
-
 /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.h:
 
 /usr/include/stdlib.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
+
+/usr/include/c++/13/cstddef:
+
+/usr/include/c++/13/bits/stl_algo.h:
 
 /usr/include/c++/13/cwctype:
 
@@ -366,19 +380,7 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/iosfwd:
 
-/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
-
-/usr/include/asm-generic/errno.h:
-
 /usr/include/c++/13/cwchar:
-
-/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
-
-/usr/include/c++/13/streambuf:
-
-/usr/include/c++/13/bits/exception.h:
 
 /usr/include/c++/13/bits/ranges_util.h:
 
@@ -386,21 +388,21 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/bits/hash_bytes.h:
 
-/usr/include/c++/13/bits/iterator_concepts.h:
+/usr/include/alloca.h:
 
-/usr/include/x86_64-linux-gnu/bits/time64.h:
+/usr/include/c++/13/bit:
 
-/usr/include/c++/13/bits/basic_ios.h:
+/usr/include/c++/13/bits/basic_string.tcc:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+/usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h:
 
-/usr/include/c++/13/bits/basic_ios.tcc:
+/usr/include/x86_64-linux-gnu/c++/13/bits/c++locale.h:
 
-/usr/include/c++/13/bits/nested_exception.h:
+/usr/include/c++/13/bits/ptr_traits.h:
 
-/usr/include/c++/13/bits/memory_resource.h:
+/usr/include/c++/13/bits/ostream_insert.h:
 
-/usr/include/wchar.h:
+/usr/include/c++/13/bits/ranges_algo.h:
 
 /usr/include/c++/13/bits/localefwd.h:
 
@@ -412,6 +414,12 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/time.h:
 
+/usr/include/c++/13/bits/move.h:
+
+/usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/bits/stl_function.h:
+
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
@@ -420,11 +428,15 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
-/usr/include/c++/13/bits/ostream.tcc:
+/usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
-/usr/include/c++/13/numbers:
+/usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
-/usr/include/c++/13/string:
+/usr/include/c++/13/streambuf:
+
+/usr/include/c++/13/bits/exception.h:
+
+/usr/include/c++/13/algorithm:
 
 /usr/include/c++/13/bits/istream.tcc:
 
@@ -440,11 +452,7 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/bits/alloc_traits.h:
 
-/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
-
-/usr/include/c++/13/bits/stl_iterator.h:
-
-/usr/include/c++/13/bits/functexcept.h:
+/usr/include/c++/13/bits/algorithmfwd.h:
 
 /usr/include/c++/13/ios:
 
@@ -456,7 +464,51 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/features-time64.h:
 
+/usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/usr/include/c++/13/bits/basic_string.h:
+
 /usr/include/stdc-predef.h:
+
+/usr/include/c++/13/bits/stl_heap.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
+
+/usr/include/c++/13/new:
+
+/usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/include/c++/13/bits/functexcept.h:
+
+/usr/include/c++/13/bits/stl_iterator.h:
+
+/usr/include/c++/13/bits/ostream.tcc:
+
+/usr/include/c++/13/numbers:
+
+/usr/include/c++/13/string:
+
+/usr/include/asm-generic/errno.h:
+
+/usr/include/c++/13/bits/stl_iterator_base_funcs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/c++/13/compare:
+
+/usr/include/c++/13/bits/stl_iterator_base_types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+
+/usr/include/c++/13/bits/stl_tempbuf.h:
+
+/usr/include/c++/13/bits/stringfwd.h:
+
+/usr/include/c++/13/bits/uniform_int_dist.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
+
+/usr/include/locale.h:
 
 /usr/include/c++/13/bits/std_abs.h:
 
@@ -469,10 +521,6 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 /usr/include/c++/13/bits/new_allocator.h:
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
-
-/usr/include/c++/13/bits/stl_function.h:
-
-/usr/include/c++/13/bits/utility.h:
 
 /usr/include/c++/13/clocale:
 
@@ -520,13 +568,19 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/c++/13/initializer_list:
 
-/usr/include/c++/13/ext/alloc_traits.h:
-
-/usr/include/c++/13/new:
-
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
 /usr/include/c++/13/ostream:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
+
+/usr/include/c++/13/bits/basic_ios.tcc:
+
+/usr/include/c++/13/pstl/execution_defs.h:
+
+/usr/include/c++/13/pstl/glue_algorithm_defs.h:
+
+/usr/include/sched.h:
 
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
@@ -552,38 +606,14 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 /usr/include/linux/errno.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
-/usr/include/locale.h:
-
 /usr/include/pthread.h:
 
-/usr/include/sched.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
-
-/usr/include/x86_64-linux-gnu/asm/errno.h:
-
-/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h:
-
-/usr/include/x86_64-linux-gnu/bits/byteswap.h:
-
-/usr/include/x86_64-linux-gnu/gnu/stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/x86_64-linux-gnu/bits/endianness.h:
+/usr/include/x86_64-linux-gnu/bits/errno.h:
 
 /usr/include/c++/13/exception:
 
 /usr/include/wctype.h:
 
-/usr/include/x86_64-linux-gnu/bits/errno.h:
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/floatn-common.h:
-
-/usr/include/x86_64-linux-gnu/bits/locale.h:
+/usr/include/x86_64-linux-gnu/asm/errno.h:

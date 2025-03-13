@@ -21,7 +21,7 @@ int main() {
 
     Multipliers(number, stack);
 
-    std::cout << number << "=";
+    std::cout << number << "= ";
     MyStack<int> invertStack;
 
     while (!stack.empty()) {
@@ -32,12 +32,32 @@ int main() {
         std::cout << ((stack.empty()) ? "\n" : " * ");
     }
 
-    std::cout << number << "=";
+    std::cout << number << "= ";
     while (!invertStack.empty()) {
         std::cout << invertStack.top_inf();
         invertStack.pop();
         std::cout << ((invertStack.empty()) ? "\n" : " * ");
     }
+
+    MyStack<char> charStack;
+    charStack.push('A');
+    charStack.push('B');
+    charStack.push('C');
+
+    std::cout << "char stack: " << charStack;
+    MyStack<char> charStack1 = charStack;
+
+    std::cout << "char stack(1): " << charStack1;
+
+    charStack.push('D');
+    charStack.push('E');
+    charStack1 = charStack;
+
+    std::cout << "char stack=: " << charStack;
+
+
+
+
     return 0;
 }
 //доп задание: новый стек с чарами, оператор присваивание стека, перегрузка копирования, перегрузка вывода стека

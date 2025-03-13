@@ -1,5 +1,7 @@
 #ifndef MYSTACK_H
 #define MYSTACK_H
+#include <algorithm>
+#include <iostream>
 
 template<class INF, class FRIEND>
 class ListNode {
@@ -17,6 +19,21 @@ class MyStack {
 
  public:
     MyStack() : top(nullptr) {}
+
+    MyStack(const MyStack& copy) : top(nullptr) {
+        MyStack temp;
+        Node* current = copy.top;
+        while (current != nullptr) {
+            temp.push(current->d);
+            current = current->next;
+        }
+
+        while (!temp.empty()) {
+            push(temp.top_inf());
+            temp.pop();
+        }
+    }
+
     ~MyStack() {
         while (!empty()) {
             pop();
@@ -43,7 +60,30 @@ class MyStack {
     }
 
     INF top_inf() { return top->d; }
+
+    MyStack& operator=(const MyStack& other) {
+        if (this != &other) {
+            MyStack temp(other);
+            std::swap(top, temp.top);
+        }
+        return *this;
+    }
+
+    friend std::ostream& operator<<(std::ostream& out, const MyStack& stack) {
+        Node* current = stack.top;
+        out << "(";
+
+        while (current != nullptr) {
+            out << current->d;
+            current = current->next;
+            if (current != nullptr) {
+                out << "; ";
+            } else {
+                out << ")\n";
+            }
+        }
+        return out;
+    }
 };
 
-void Multipliers(int n, MyStack<int>& stack);
 #endif  // MYSTACK_H
