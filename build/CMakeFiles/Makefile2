@@ -63,60 +63,60 @@ CMAKE_BINARY_DIR = /home/ted/BMSTUproga/Ro-Labs-2025/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lab4.dir/all
-all: stack/all
+all: CMakeFiles/lab5.dir/all
+all: vecLib/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall: stack/preinstall
+preinstall: vecLib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lab4.dir/clean
+clean: CMakeFiles/lab5.dir/clean
 clean: CMakeFiles/clang-format.dir/clean
-clean: stack/clean
+clean: vecLib/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory stack
+# Directory level rules for directory vecLib
 
 # Recursive "all" directory target.
-stack/all: stack/CMakeFiles/stack.dir/all
-.PHONY : stack/all
+vecLib/all: vecLib/CMakeFiles/vecLib.dir/all
+.PHONY : vecLib/all
 
 # Recursive "preinstall" directory target.
-stack/preinstall:
-.PHONY : stack/preinstall
+vecLib/preinstall:
+.PHONY : vecLib/preinstall
 
 # Recursive "clean" directory target.
-stack/clean: stack/CMakeFiles/stack.dir/clean
-.PHONY : stack/clean
+vecLib/clean: vecLib/CMakeFiles/vecLib.dir/clean
+.PHONY : vecLib/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lab4.dir
+# Target rules for target CMakeFiles/lab5.dir
 
 # All Build rule for target.
-CMakeFiles/lab4.dir/all: stack/CMakeFiles/stack.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2 "Built target lab4"
-.PHONY : CMakeFiles/lab4.dir/all
+CMakeFiles/lab5.dir/all: vecLib/CMakeFiles/vecLib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2 "Built target lab5"
+.PHONY : CMakeFiles/lab5.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lab4.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab4.dir/all
+CMakeFiles/lab5.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab5.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
-.PHONY : CMakeFiles/lab4.dir/rule
+.PHONY : CMakeFiles/lab5.dir/rule
 
 # Convenience name for target.
-lab4: CMakeFiles/lab4.dir/rule
-.PHONY : lab4
+lab5: CMakeFiles/lab5.dir/rule
+.PHONY : lab5
 
 # clean rule for target.
-CMakeFiles/lab4.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/clean
-.PHONY : CMakeFiles/lab4.dir/clean
+CMakeFiles/lab5.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/clean
+.PHONY : CMakeFiles/lab5.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/clang-format.dir
@@ -145,30 +145,30 @@ CMakeFiles/clang-format.dir/clean:
 .PHONY : CMakeFiles/clang-format.dir/clean
 
 #=============================================================================
-# Target rules for target stack/CMakeFiles/stack.dir
+# Target rules for target vecLib/CMakeFiles/vecLib.dir
 
 # All Build rule for target.
-stack/CMakeFiles/stack.dir/all:
-	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/depend
-	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=3,4 "Built target stack"
-.PHONY : stack/CMakeFiles/stack.dir/all
+vecLib/CMakeFiles/vecLib.dir/all:
+	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/depend
+	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=3,4,5 "Built target vecLib"
+.PHONY : vecLib/CMakeFiles/vecLib.dir/all
 
 # Build rule for subdir invocation for target.
-stack/CMakeFiles/stack.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 stack/CMakeFiles/stack.dir/all
+vecLib/CMakeFiles/vecLib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/CMakeFiles/vecLib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
-.PHONY : stack/CMakeFiles/stack.dir/rule
+.PHONY : vecLib/CMakeFiles/vecLib.dir/rule
 
 # Convenience name for target.
-stack: stack/CMakeFiles/stack.dir/rule
-.PHONY : stack
+vecLib: vecLib/CMakeFiles/vecLib.dir/rule
+.PHONY : vecLib
 
 # clean rule for target.
-stack/CMakeFiles/stack.dir/clean:
-	$(MAKE) $(MAKESILENT) -f stack/CMakeFiles/stack.dir/build.make stack/CMakeFiles/stack.dir/clean
-.PHONY : stack/CMakeFiles/stack.dir/clean
+vecLib/CMakeFiles/vecLib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/clean
+.PHONY : vecLib/CMakeFiles/vecLib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles /home/ted/BMSTUproga/Ro-Labs-2025/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib//CMakeFiles/progress.marks
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,81 +103,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named lab5
+# Convenience name for target.
+vecLib/CMakeFiles/vecLib.dir/rule:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/CMakeFiles/vecLib.dir/rule
+.PHONY : vecLib/CMakeFiles/vecLib.dir/rule
 
-# Build rule for target.
-lab5: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lab5
-.PHONY : lab5
-
-# fast build rule for target.
-lab5/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/build
-.PHONY : lab5/fast
-
-#=============================================================================
-# Target rules for targets named clang-format
-
-# Build rule for target.
-clang-format: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clang-format
-.PHONY : clang-format
-
-# fast build rule for target.
-clang-format/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/build
-.PHONY : clang-format/fast
-
-#=============================================================================
-# Target rules for targets named vecLib
-
-# Build rule for target.
-vecLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib
+# Convenience name for target.
+vecLib: vecLib/CMakeFiles/vecLib.dir/rule
 .PHONY : vecLib
 
 # fast build rule for target.
 vecLib/fast:
-	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
 .PHONY : vecLib/fast
 
-main_l5.o: main_l5.cpp.o
-.PHONY : main_l5.o
+MySet.o: MySet.cpp.o
+.PHONY : MySet.o
 
 # target to build an object file
-main_l5.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main_l5.cpp.o
-.PHONY : main_l5.cpp.o
+MySet.cpp.o:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o
+.PHONY : MySet.cpp.o
 
-main_l5.i: main_l5.cpp.i
-.PHONY : main_l5.i
+MySet.i: MySet.cpp.i
+.PHONY : MySet.i
 
 # target to preprocess a source file
-main_l5.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main_l5.cpp.i
-.PHONY : main_l5.cpp.i
+MySet.cpp.i:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MySet.cpp.i
+.PHONY : MySet.cpp.i
 
-main_l5.s: main_l5.cpp.s
-.PHONY : main_l5.s
+MySet.s: MySet.cpp.s
+.PHONY : MySet.s
 
 # target to generate assembly for a file
-main_l5.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main_l5.cpp.s
-.PHONY : main_l5.cpp.s
+MySet.cpp.s:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MySet.cpp.s
+.PHONY : MySet.cpp.s
+
+MyVector.o: MyVector.cpp.o
+.PHONY : MyVector.o
+
+# target to build an object file
+MyVector.cpp.o:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o
+.PHONY : MyVector.cpp.o
+
+MyVector.i: MyVector.cpp.i
+.PHONY : MyVector.i
+
+# target to preprocess a source file
+MyVector.cpp.i:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.i
+.PHONY : MyVector.cpp.i
+
+MyVector.s: MyVector.cpp.s
+.PHONY : MyVector.s
+
+# target to generate assembly for a file
+MyVector.cpp.s:
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.s
+.PHONY : MyVector.cpp.s
 
 # Help Target
 help:
@@ -187,12 +186,13 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... clang-format"
-	@echo "... lab5"
 	@echo "... vecLib"
-	@echo "... main_l5.o"
-	@echo "... main_l5.i"
-	@echo "... main_l5.s"
+	@echo "... MySet.o"
+	@echo "... MySet.i"
+	@echo "... MySet.s"
+	@echo "... MyVector.o"
+	@echo "... MyVector.i"
+	@echo "... MyVector.s"
 .PHONY : help
 
 
@@ -204,6 +204,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

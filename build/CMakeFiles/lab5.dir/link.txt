@@ -1,0 +1,1 @@
+/usr/bin/clang++-18 -g CMakeFiles/lab5.dir/main_l5.cpp.o -o lab5  vecLib/libvecLib.a 

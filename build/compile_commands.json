@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/ted/BMSTUproga/Ro-Labs-2025/build",
+  "command": "/usr/bin/clang++-18   -g -std=gnu++20 -Wall -Wextra -Werror -Wpedantic -o CMakeFiles/lab5.dir/main_l5.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp",
+  "file": "/home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp",
+  "output": "CMakeFiles/lab5.dir/main_l5.cpp.o"
+},
+{
+  "directory": "/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib",
+  "command": "/usr/bin/clang++-18   -g -o CMakeFiles/vecLib.dir/MySet.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp",
+  "file": "/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp",
+  "output": "vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o"
+},
+{
+  "directory": "/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib",
+  "command": "/usr/bin/clang++-18   -g -o CMakeFiles/vecLib.dir/MyVector.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp",
+  "file": "/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp",
+  "output": "vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o"
+}
+]

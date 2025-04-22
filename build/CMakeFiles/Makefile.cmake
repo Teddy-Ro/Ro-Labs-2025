@@ -11,7 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.28.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.28.3/CMakeSystem.cmake"
-  "/home/ted/BMSTUproga/Ro-Labs-2025/stack/CMakeLists.txt"
+  "/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/CMakeLists.txt"
   "/usr/share/cmake-3.28/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"
@@ -21,9 +21,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake"
-  "/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake"
+  "/usr/share/cmake-3.28/Modules/Compiler/Clang-C.cmake"
+  "/usr/share/cmake-3.28/Modules/Compiler/Clang-CXX.cmake"
+  "/usr/share/cmake-3.28/Modules/Compiler/Clang.cmake"
   "/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.28/Modules/Platform/Linux-Clang-C.cmake"
+  "/usr/share/cmake-3.28/Modules/Platform/Linux-Clang-CXX.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake"
@@ -41,12 +44,12 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "stack/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "vecLib/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/lab4.dir/DependInfo.cmake"
+  "CMakeFiles/lab5.dir/DependInfo.cmake"
   "CMakeFiles/clang-format.dir/DependInfo.cmake"
-  "stack/CMakeFiles/stack.dir/DependInfo.cmake"
+  "vecLib/CMakeFiles/vecLib.dir/DependInfo.cmake"
   )
