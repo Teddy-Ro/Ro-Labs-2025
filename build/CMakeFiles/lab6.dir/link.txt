@@ -1,0 +1,1 @@
+/usr/bin/clang++-18 -g CMakeFiles/lab6.dir/main_l6.cpp.o -o lab6  vecLib/libvecLib.a 

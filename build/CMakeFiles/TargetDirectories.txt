@@ -1,7 +1,7 @@
-/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/lab4.dir
+/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/lab6.dir
 /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/clang-format.dir
 /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/edit_cache.dir
 /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/rebuild_cache.dir
-/home/ted/BMSTUproga/Ro-Labs-2025/build/stack/CMakeFiles/stack.dir
-/home/ted/BMSTUproga/Ro-Labs-2025/build/stack/CMakeFiles/edit_cache.dir
-/home/ted/BMSTUproga/Ro-Labs-2025/build/stack/CMakeFiles/rebuild_cache.dir
+/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib/CMakeFiles/vecLib.dir
+/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib/CMakeFiles/edit_cache.dir
+/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib/CMakeFiles/rebuild_cache.dir

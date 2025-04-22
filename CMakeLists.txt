@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.21.1)
-project(lab5)
+project(lab6)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
 
 set(SOURCES
-    ${CMAKE_CURRENT_SOURCE_DIR}/main_l5.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/main_l6.cpp
 )
 
 add_subdirectory(vecLib)
