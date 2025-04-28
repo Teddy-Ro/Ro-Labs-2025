@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/lab4.dir/main_l4.cpp.o -o lab4  stack/libstack.a 
+/usr/bin/clang++-18 CMakeFiles/lab4.dir/main_l4.cpp.o -o lab4  stack/libstack.a 

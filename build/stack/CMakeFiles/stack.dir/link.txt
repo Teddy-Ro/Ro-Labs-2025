@@ -1,2 +1,2 @@
-/usr/bin/ar qc libstack.a CMakeFiles/stack.dir/stack.cpp.o
-/usr/bin/ranlib libstack.a
+/usr/bin/llvm-ar-18 qc libstack.a CMakeFiles/stack.dir/stack.cpp.o
+/usr/bin/llvm-ranlib-18 libstack.a

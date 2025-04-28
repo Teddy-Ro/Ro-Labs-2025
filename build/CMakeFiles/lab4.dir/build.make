@@ -73,15 +73,15 @@ CMakeFiles/lab4.dir/main_l4.cpp.o: CMakeFiles/lab4.dir/flags.make
 CMakeFiles/lab4.dir/main_l4.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 CMakeFiles/lab4.dir/main_l4.cpp.o: CMakeFiles/lab4.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab4.dir/main_l4.cpp.o"
-	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp -- /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab4.dir/main_l4.cpp.o -MF CMakeFiles/lab4.dir/main_l4.cpp.o.d -o CMakeFiles/lab4.dir/main_l4.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab4.dir/main_l4.cpp.o -MF CMakeFiles/lab4.dir/main_l4.cpp.o.d -o CMakeFiles/lab4.dir/main_l4.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp
 
 CMakeFiles/lab4.dir/main_l4.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab4.dir/main_l4.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp > CMakeFiles/lab4.dir/main_l4.cpp.i
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp > CMakeFiles/lab4.dir/main_l4.cpp.i
 
 CMakeFiles/lab4.dir/main_l4.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab4.dir/main_l4.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp -o CMakeFiles/lab4.dir/main_l4.cpp.s
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/main_l4.cpp -o CMakeFiles/lab4.dir/main_l4.cpp.s
 
 # Object files for target lab4
 lab4_OBJECTS = \

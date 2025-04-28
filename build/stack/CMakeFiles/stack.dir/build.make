@@ -73,15 +73,15 @@ stack/CMakeFiles/stack.dir/stack.cpp.o: stack/CMakeFiles/stack.dir/flags.make
 stack/CMakeFiles/stack.dir/stack.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp
 stack/CMakeFiles/stack.dir/stack.cpp.o: stack/CMakeFiles/stack.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object stack/CMakeFiles/stack.dir/stack.cpp.o"
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/stack && $(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp -- /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT stack/CMakeFiles/stack.dir/stack.cpp.o -MF CMakeFiles/stack.dir/stack.cpp.o.d -o CMakeFiles/stack.dir/stack.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/stack && $(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT stack/CMakeFiles/stack.dir/stack.cpp.o -MF CMakeFiles/stack.dir/stack.cpp.o.d -o CMakeFiles/stack.dir/stack.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp
 
 stack/CMakeFiles/stack.dir/stack.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/stack.dir/stack.cpp.i"
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/stack && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp > CMakeFiles/stack.dir/stack.cpp.i
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/stack && /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp > CMakeFiles/stack.dir/stack.cpp.i
 
 stack/CMakeFiles/stack.dir/stack.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/stack.dir/stack.cpp.s"
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/stack && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp -o CMakeFiles/stack.dir/stack.cpp.s
+	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/stack && /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/stack/stack.cpp -o CMakeFiles/stack.dir/stack.cpp.s
 
 # Object files for target stack
 stack_OBJECTS = \
