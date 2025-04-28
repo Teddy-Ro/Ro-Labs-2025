@@ -169,6 +169,8 @@ class MyVector<char*> {
                 pdata[i] = pdata[i + 1];
             }
             size--;
+
+            delete[] pdata[size];
             if (size < maxSize / 4 && maxSize > 1) {
                 Resize(std::max(maxSize / 2, static_cast<size_t>(1)));
             }
