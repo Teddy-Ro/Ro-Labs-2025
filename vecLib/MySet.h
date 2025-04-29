@@ -149,6 +149,11 @@ class MySet<char*> : public MyVector<char*> {
 
     MySet(const MySet& other) : MyVector<char*>(other) {}
 
+    MySet(const char* element) : MyVector<char*>(1) {
+        this->AddElement(element);
+        this->Sort();
+    }
+
     bool IsElement(const char* element) const { return QikcFind(element) != -1; }
 
     void AddElement(const char* element) override {
