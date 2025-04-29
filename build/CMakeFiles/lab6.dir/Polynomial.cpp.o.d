@@ -1,5 +1,7 @@
-CMakeFiles/lab6.dir/main_l6.cpp.o: \
-  /home/ted/BMSTUproga/Ro-Labs-2025/main_l6.cpp \
+CMakeFiles/lab6.dir/Polynomial.cpp.o: \
+  /home/ted/BMSTUproga/Ro-Labs-2025/Polynomial.cpp \
+  /home/ted/BMSTUproga/Ro-Labs-2025/Polynomial.h \
+  /home/ted/BMSTUproga/Ro-Labs-2025/Term.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/iostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/requires_hosted.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -190,8 +192,8 @@ CMakeFiles/lab6.dir/main_l6.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/ostream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/istream.tcc \
-  /home/ted/BMSTUproga/Ro-Labs-2025/Term.h \
-  /home/ted/BMSTUproga/Ro-Labs-2025/Polynomial.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/sstream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/sstream.tcc \
   /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/algorithm \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_algo.h \
