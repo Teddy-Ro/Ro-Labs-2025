@@ -69,24 +69,10 @@ include vecLib/CMakeFiles/vecLib.dir/progress.make
 # Include the compile flags for this target's objects.
 include vecLib/CMakeFiles/vecLib.dir/flags.make
 
-vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o: vecLib/CMakeFiles/vecLib.dir/flags.make
-vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp
-vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o: vecLib/CMakeFiles/vecLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o"
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib && $(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o -MF CMakeFiles/vecLib.dir/MySet.cpp.o.d -o CMakeFiles/vecLib.dir/MySet.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp
-
-vecLib/CMakeFiles/vecLib.dir/MySet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/vecLib.dir/MySet.cpp.i"
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib && /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp > CMakeFiles/vecLib.dir/MySet.cpp.i
-
-vecLib/CMakeFiles/vecLib.dir/MySet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/vecLib.dir/MySet.cpp.s"
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib && /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp -o CMakeFiles/vecLib.dir/MySet.cpp.s
-
 vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o: vecLib/CMakeFiles/vecLib.dir/flags.make
 vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp
 vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o: vecLib/CMakeFiles/vecLib.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o"
 	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib && $(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o -MF CMakeFiles/vecLib.dir/MyVector.cpp.o.d -o CMakeFiles/vecLib.dir/MyVector.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp
 
 vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.i: cmake_force
@@ -99,17 +85,15 @@ vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.s: cmake_force
 
 # Object files for target vecLib
 vecLib_OBJECTS = \
-"CMakeFiles/vecLib.dir/MySet.cpp.o" \
 "CMakeFiles/vecLib.dir/MyVector.cpp.o"
 
 # External object files for target vecLib
 vecLib_EXTERNAL_OBJECTS =
 
-vecLib/libvecLib.a: vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o
 vecLib/libvecLib.a: vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o
 vecLib/libvecLib.a: vecLib/CMakeFiles/vecLib.dir/build.make
 vecLib/libvecLib.a: vecLib/CMakeFiles/vecLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libvecLib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libvecLib.a"
 	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib && $(CMAKE_COMMAND) -P CMakeFiles/vecLib.dir/cmake_clean_target.cmake
 	cd /home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/vecLib.dir/link.txt --verbose=$(VERBOSE)
 

@@ -1,6 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/vecLib.dir/MySet.cpp.o"
-  "CMakeFiles/vecLib.dir/MySet.cpp.o.d"
   "CMakeFiles/vecLib.dir/MyVector.cpp.o"
   "CMakeFiles/vecLib.dir/MyVector.cpp.o.d"
   "libvecLib.a"

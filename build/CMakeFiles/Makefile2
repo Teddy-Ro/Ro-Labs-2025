@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/ted/BMSTUproga/Ro-Labs-2025/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/lab5.dir/all
+all: CMakeFiles/lab7.dir/all
 all: vecLib/all
 .PHONY : all
 
@@ -72,7 +72,7 @@ preinstall: vecLib/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/lab5.dir/clean
+clean: CMakeFiles/lab7.dir/clean
 clean: CMakeFiles/clang-format.dir/clean
 clean: vecLib/clean
 .PHONY : clean
@@ -93,30 +93,30 @@ vecLib/clean: vecLib/CMakeFiles/vecLib.dir/clean
 .PHONY : vecLib/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/lab5.dir
+# Target rules for target CMakeFiles/lab7.dir
 
 # All Build rule for target.
-CMakeFiles/lab5.dir/all: vecLib/CMakeFiles/vecLib.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2 "Built target lab5"
-.PHONY : CMakeFiles/lab5.dir/all
+CMakeFiles/lab7.dir/all: vecLib/CMakeFiles/vecLib.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target lab7"
+.PHONY : CMakeFiles/lab7.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/lab5.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab5.dir/all
+CMakeFiles/lab7.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 8
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab7.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
-.PHONY : CMakeFiles/lab5.dir/rule
+.PHONY : CMakeFiles/lab7.dir/rule
 
 # Convenience name for target.
-lab5: CMakeFiles/lab5.dir/rule
-.PHONY : lab5
+lab7: CMakeFiles/lab7.dir/rule
+.PHONY : lab7
 
 # clean rule for target.
-CMakeFiles/lab5.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/clean
-.PHONY : CMakeFiles/lab5.dir/clean
+CMakeFiles/lab7.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/clean
+.PHONY : CMakeFiles/lab7.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/clang-format.dir
@@ -151,12 +151,12 @@ CMakeFiles/clang-format.dir/clean:
 vecLib/CMakeFiles/vecLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=3,4,5 "Built target vecLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=7,8 "Built target vecLib"
 .PHONY : vecLib/CMakeFiles/vecLib.dir/all
 
 # Build rule for subdir invocation for target.
 vecLib/CMakeFiles/vecLib.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib/CMakeFiles/vecLib.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
 .PHONY : vecLib/CMakeFiles/vecLib.dir/rule

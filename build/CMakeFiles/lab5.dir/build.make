@@ -69,32 +69,96 @@ include CMakeFiles/lab5.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/lab5.dir/flags.make
 
-CMakeFiles/lab5.dir/main_l5.cpp.o: CMakeFiles/lab5.dir/flags.make
-CMakeFiles/lab5.dir/main_l5.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp
-CMakeFiles/lab5.dir/main_l5.cpp.o: CMakeFiles/lab5.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab5.dir/main_l5.cpp.o"
-	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab5.dir/main_l5.cpp.o -MF CMakeFiles/lab5.dir/main_l5.cpp.o.d -o CMakeFiles/lab5.dir/main_l5.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp
+CMakeFiles/lab5.dir/src/Staff.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/src/Staff.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp
+CMakeFiles/lab5.dir/src/Staff.cpp.o: CMakeFiles/lab5.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab5.dir/src/Staff.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab5.dir/src/Staff.cpp.o -MF CMakeFiles/lab5.dir/src/Staff.cpp.o.d -o CMakeFiles/lab5.dir/src/Staff.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp
 
-CMakeFiles/lab5.dir/main_l5.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab5.dir/main_l5.cpp.i"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp > CMakeFiles/lab5.dir/main_l5.cpp.i
+CMakeFiles/lab5.dir/src/Staff.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab5.dir/src/Staff.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp > CMakeFiles/lab5.dir/src/Staff.cpp.i
 
-CMakeFiles/lab5.dir/main_l5.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/main_l5.cpp.s"
-	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/main_l5.cpp -o CMakeFiles/lab5.dir/main_l5.cpp.s
+CMakeFiles/lab5.dir/src/Staff.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/src/Staff.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp -o CMakeFiles/lab5.dir/src/Staff.cpp.s
+
+CMakeFiles/lab5.dir/src/Worker.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/src/Worker.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp
+CMakeFiles/lab5.dir/src/Worker.cpp.o: CMakeFiles/lab5.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab5.dir/src/Worker.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab5.dir/src/Worker.cpp.o -MF CMakeFiles/lab5.dir/src/Worker.cpp.o.d -o CMakeFiles/lab5.dir/src/Worker.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp
+
+CMakeFiles/lab5.dir/src/Worker.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab5.dir/src/Worker.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp > CMakeFiles/lab5.dir/src/Worker.cpp.i
+
+CMakeFiles/lab5.dir/src/Worker.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/src/Worker.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp -o CMakeFiles/lab5.dir/src/Worker.cpp.s
+
+CMakeFiles/lab5.dir/src/Engineer.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/src/Engineer.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp
+CMakeFiles/lab5.dir/src/Engineer.cpp.o: CMakeFiles/lab5.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab5.dir/src/Engineer.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab5.dir/src/Engineer.cpp.o -MF CMakeFiles/lab5.dir/src/Engineer.cpp.o.d -o CMakeFiles/lab5.dir/src/Engineer.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp
+
+CMakeFiles/lab5.dir/src/Engineer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab5.dir/src/Engineer.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp > CMakeFiles/lab5.dir/src/Engineer.cpp.i
+
+CMakeFiles/lab5.dir/src/Engineer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/src/Engineer.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp -o CMakeFiles/lab5.dir/src/Engineer.cpp.s
+
+CMakeFiles/lab5.dir/src/Administration.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/src/Administration.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp
+CMakeFiles/lab5.dir/src/Administration.cpp.o: CMakeFiles/lab5.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab5.dir/src/Administration.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab5.dir/src/Administration.cpp.o -MF CMakeFiles/lab5.dir/src/Administration.cpp.o.d -o CMakeFiles/lab5.dir/src/Administration.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp
+
+CMakeFiles/lab5.dir/src/Administration.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab5.dir/src/Administration.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp > CMakeFiles/lab5.dir/src/Administration.cpp.i
+
+CMakeFiles/lab5.dir/src/Administration.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/src/Administration.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp -o CMakeFiles/lab5.dir/src/Administration.cpp.s
+
+CMakeFiles/lab5.dir/main_l7.cpp.o: CMakeFiles/lab5.dir/flags.make
+CMakeFiles/lab5.dir/main_l7.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp
+CMakeFiles/lab5.dir/main_l7.cpp.o: CMakeFiles/lab5.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/lab5.dir/main_l7.cpp.o"
+	$(CMAKE_COMMAND) -E __run_co_compile --tidy="clang-tidy;--extra-arg-before=--driver-mode=g++" --source=/home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp -- /usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab5.dir/main_l7.cpp.o -MF CMakeFiles/lab5.dir/main_l7.cpp.o.d -o CMakeFiles/lab5.dir/main_l7.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp
+
+CMakeFiles/lab5.dir/main_l7.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/lab5.dir/main_l7.cpp.i"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp > CMakeFiles/lab5.dir/main_l7.cpp.i
+
+CMakeFiles/lab5.dir/main_l7.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/lab5.dir/main_l7.cpp.s"
+	/usr/bin/clang++-18 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp -o CMakeFiles/lab5.dir/main_l7.cpp.s
 
 # Object files for target lab5
 lab5_OBJECTS = \
-"CMakeFiles/lab5.dir/main_l5.cpp.o"
+"CMakeFiles/lab5.dir/src/Staff.cpp.o" \
+"CMakeFiles/lab5.dir/src/Worker.cpp.o" \
+"CMakeFiles/lab5.dir/src/Engineer.cpp.o" \
+"CMakeFiles/lab5.dir/src/Administration.cpp.o" \
+"CMakeFiles/lab5.dir/main_l7.cpp.o"
 
 # External object files for target lab5
 lab5_EXTERNAL_OBJECTS =
 
-lab5: CMakeFiles/lab5.dir/main_l5.cpp.o
+lab5: CMakeFiles/lab5.dir/src/Staff.cpp.o
+lab5: CMakeFiles/lab5.dir/src/Worker.cpp.o
+lab5: CMakeFiles/lab5.dir/src/Engineer.cpp.o
+lab5: CMakeFiles/lab5.dir/src/Administration.cpp.o
+lab5: CMakeFiles/lab5.dir/main_l7.cpp.o
 lab5: CMakeFiles/lab5.dir/build.make
 lab5: vecLib/libvecLib.a
 lab5: CMakeFiles/lab5.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable lab5"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable lab5"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab5.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

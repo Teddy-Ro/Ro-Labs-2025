@@ -49,7 +49,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/lab5.dir/DependInfo.cmake"
+  "CMakeFiles/lab7.dir/DependInfo.cmake"
   "CMakeFiles/clang-format.dir/DependInfo.cmake"
   "vecLib/CMakeFiles/vecLib.dir/DependInfo.cmake"
   )

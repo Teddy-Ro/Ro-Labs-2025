@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.cpp" "vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o" "gcc" "vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o.d"
   "/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp" "vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o" "gcc" "vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o.d"
   )
 

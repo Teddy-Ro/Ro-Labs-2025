@@ -130,30 +130,6 @@ vecLib/fast:
 	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
 .PHONY : vecLib/fast
 
-MySet.o: MySet.cpp.o
-.PHONY : MySet.o
-
-# target to build an object file
-MySet.cpp.o:
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MySet.cpp.o
-.PHONY : MySet.cpp.o
-
-MySet.i: MySet.cpp.i
-.PHONY : MySet.i
-
-# target to preprocess a source file
-MySet.cpp.i:
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MySet.cpp.i
-.PHONY : MySet.cpp.i
-
-MySet.s: MySet.cpp.s
-.PHONY : MySet.s
-
-# target to generate assembly for a file
-MySet.cpp.s:
-	cd /home/ted/BMSTUproga/Ro-Labs-2025/build && $(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/MySet.cpp.s
-.PHONY : MySet.cpp.s
-
 MyVector.o: MyVector.cpp.o
 .PHONY : MyVector.o
 
@@ -187,9 +163,6 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... vecLib"
-	@echo "... MySet.o"
-	@echo "... MySet.i"
-	@echo "... MySet.s"
 	@echo "... MyVector.o"
 	@echo "... MyVector.i"
 	@echo "... MyVector.s"

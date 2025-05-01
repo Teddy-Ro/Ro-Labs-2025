@@ -149,7 +149,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=lab5
+CMAKE_PROJECT_NAME:STATIC=lab7
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/llvm-ranlib-18
@@ -224,6 +224,15 @@ lab5_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 lab5_SOURCE_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025
+
+//Value Computed by CMake
+lab7_BINARY_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025/build
+
+//Value Computed by CMake
+lab7_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+lab7_SOURCE_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025
 
 //Value Computed by CMake
 vecLib_BINARY_DIR:STATIC=/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib
