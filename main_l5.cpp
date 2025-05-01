@@ -1,71 +1,57 @@
-// main_l5.cpp
+// main.cpp
 #include <iostream>
 #include "vecLib/MySet.h"
-#include "vecLib/MyVector.h"
 
 int main() {
-    // Тестирование MyVector
-    MyVector<const char*> v("Hello!");
-    v.AddElement("Привет!");
-    v.AddElement("Привет!");
-    v.AddElement("Привет!");
-    v.AddElement("Привет!");
-    v.AddElement("Привет!");
-    std::cout << "Вектор v: " << v << std::endl;
+    // Тестирование с int
+    MySet<int> set1;
+    set1.AddElement(1);
+    set1.AddElement(4);
+    set1.AddElement(5);
+    set1.AddElement(6);
 
-    v.AddElement("Привет!");
-    v.AddElement("Привет!");
-    v.AddElement("Привет!");
-    std::cout << "Вектор v: " << v << std::endl;
+    MySet<int> set2;
+    set2.AddElement(1);
+    set2.AddElement(2);
+    set2.AddElement(3);
+    set2.AddElement(4);
 
-    MyVector<const char*> v1 = v;
-    std::cout << "Вектор v1: " << v1 << std::endl;
+    std::cout << "Set1: " << set1 << std::endl;
+    std::cout << "Set2: " << set2 << std::endl;
 
-    for (size_t i = 0; i < v1.GetMaxSize(); i++)
-        v1.DeleteElementForIndex(0);  // Удаление по индексу
-    std::cout << "Вектор v1: " << v1 << std::endl;
+    MySet<int> union_set = set1 + set2;
+    MySet<int> intersection_set = set1 * set2;
+    MySet<int> difference_set = set1 - set2;
 
-    // Тестирование MySet
-    MySet<const char*> s("Yes");
-    s.AddElement("Привет!");
-    s.AddElement("No");
-    const char* str = "Hello!";
-    s.AddElement(str);
-    std::cout << "Множество s: " << s << std::endl;
+    std::cout << "Union: " << union_set << std::endl;
+    std::cout << "Intersection: " << intersection_set << std::endl;
+    std::cout << "Difference: " << difference_set << std::endl;
 
-    MySet<const char*> s1;
-    s1.AddElement("Cat");
-    s1.AddElement("No");
-    s1.AddElement("Привет!");
-    std::cout << "Множество s1: " << s1 << std::endl;
+    std::cout << "Set1 == Set2: " << (set1 == set2) << std::endl;
 
-    MySet<const char*> s2 = s1 - s;
-    std::cout << "Множество s2=s1-s: " << s2 << std::endl;
-    std::cout << "Множество s1: " << s1 << std::endl;
-    std::cout << "Множество s: " << s << std::endl;
+    // Тестирование с char*
+    MySet<char*> str_set1;
+    str_set1.AddElement("apple");
+    str_set1.AddElement("banana");
+    str_set1.AddElement("orange");
 
-    s2 = s - s1;
-    std::cout << "Множество s2=s-s1: " << s2 << std::endl;
-    std::cout << "Множество s1: " << s1 << std::endl;
-    std::cout << "Множество s: " << s << std::endl;
+    MySet<char*> str_set2;
+    str_set2.AddElement("banana");
+    str_set2.AddElement("kiwi");
+    str_set2.AddElement("apple");
 
-    s2 = s1 + s;
-    std::cout << "Множество s2=s1+s: " << s2 << std::endl;
-    std::cout << "Множество s1: " << s1 << std::endl;
-    std::cout << "Множество s: " << s << std::endl;
+    std::cout << "\nString Set1: " << str_set1 << std::endl;
+    std::cout << "String Set2: " << str_set2 << std::endl;
 
-    s2 = s1 * s;
-    std::cout << "Множество s2=s1*s: " << s2 << std::endl;
-    std::cout << "Множество s1: " << s1 << std::endl;
-    std::cout << "Множество s: " << s << std::endl;
+    MySet<char*> str_union = str_set1 + str_set2;
+    MySet<char*> str_intersection = str_set1 * str_set2;
+    MySet<char*> str_difference = str_set1 - str_set2;
 
-    MySet<const char*> s3 = s2;
-    std::cout << "Множество s3=s2: " << s3 << std::endl;
+    std::cout << "String Union: " << str_union << std::endl;
+    std::cout << "String Intersection: " << str_intersection << std::endl;
+    std::cout << "String Difference: " << str_difference << std::endl;
 
-    std::cout << "Сравнение множеств:\n";
-    std::cout << "s3 == s2: " << (s3 == s2 ? "Да" : "Нет") << std::endl;
-    std::cout << "s3 == s1: " << (s3 == s1 ? "Да" : "Нет") << std::endl;
-    std::cout << "s1 == s3: " << (s1 == s3 ? "Да" : "Нет") << std::endl;
+    std::cout << "String Set1 == String Set2: " << (str_set1 == str_set2) << std::endl;
 
     return 0;
 }
