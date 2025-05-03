@@ -1,2 +1,0 @@
-/usr/bin/llvm-ar-18 qc libvecLib.a CMakeFiles/vecLib.dir/MyVector.cpp.o
-/usr/bin/llvm-ranlib-18 libvecLib.a

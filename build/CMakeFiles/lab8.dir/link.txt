@@ -1,0 +1,1 @@
+/usr/bin/clang++-18 -g CMakeFiles/lab8.dir/main_l8.cpp.o CMakeFiles/lab8.dir/tasks.cpp.o -o lab8 
