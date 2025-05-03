@@ -1,11 +1,15 @@
 // tasks.cpp
 #include "tasks.h"
-#include "Inventory.h"
 #include <fstream>
 #include <iostream>
+#include <iterator>
+#include <list>
+#include <random>
 #include <string>
 #include <vector>
-#include <random>
+#include <map>
+#include "Box.h"
+#include "Inventory.h"
 
 void task1() {
     std::cout << "Выполняется Задание №1\n";
@@ -47,10 +51,9 @@ void task3() {
     std::string line;
 
     if (allStr.is_open() && numStr.is_open()) {
-
         while (std::getline(allStr, line)) {
-            if (isdigit(line.front())){
-                numStr << line <<std::endl;
+            if (isdigit(line.front())) {
+                numStr << line << std::endl;
             }
         }
     }
@@ -58,9 +61,9 @@ void task3() {
     numStr.close();
 }
 
-void PrintVec(const std::vector<int>& v){
-    for (int i : v){
-        std::cout << i <<"\n";
+void PrintVec(const std::vector<int>& v) {
+    for (int i : v) {
+        std::cout << i << "\n";
     }
     std::cout << std::endl;
 }
@@ -68,19 +71,19 @@ void PrintVec(const std::vector<int>& v){
 void task4() {
     std::cout << "Выполняется Задание №4\n";
 
-    std::random_device rd;  // источник энтропии
+    std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> distrib(-100, 100);
 
     std::vector<int> vec;
-    for (int i = 0; i < 6; i++){
+    for (int i = 0; i < 6; i++) {
         vec.push_back(distrib(gen));
     }
     PrintVec(vec);
 
     std::vector<int> vec2;
     for (int i : vec) {
-        if (i < 0){
+        if (i < 0) {
             vec2.push_back(i);
         }
     }
@@ -90,9 +93,9 @@ void task4() {
     PrintVec(vec);
 }
 
-void PrintVec(const std::vector<Inventory>& v){
-    for (Inventory i : v){
-        std::cout << i <<"\n";
+void PrintVec(const std::vector<Inventory>& v) {
+    for (Inventory i : v) {
+        std::cout << i << "\n";
     }
     std::cout << std::endl;
 }
@@ -100,35 +103,96 @@ void PrintVec(const std::vector<Inventory>& v){
 void task5() {
     std::cout << "Выполняется Задание №5\n";
 
-    std::vector<Inventory> warehouse {
-        {"Отверка", 99, 0},
-        {"Молоток", 430, 10},
-        {"Гайки", 70, 100},
-        {"Профиль", 540, 0},
-        {"Уголок", 230, 9},
-        {"Доска", 350, 17}
+    std::vector<Inventory> warehouse{
+        {"Отверка", 99,  0  },
+        {"Молоток", 430, 10 },
+        {"Гайки",     70,  100},
+        {"Профиль", 540, 0  },
+        {"Уголок",   230, 9  },
+        {"Доска",     350, 17 }
     };
 
     PrintVec(warehouse);
 
     std::vector<Inventory> absent;
     for (Inventory i : warehouse) {
-        if (i.getOnHand() == 0){
+        if (i.getOnHand() == 0) {
             absent.push_back(i);
         }
     }
 
     PrintVec(absent);
-
 }
+
+void PrintList(std::list<int>& l) {
+    for (int i : l) {
+        std::cout << i << "\n";
+    }
+    std::cout << std::endl;
+}
+
 void task6() {
     std::cout << "Выполняется Задание №6\n";
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<> distrib(-100, 100);
+
+    std::list<int> lis;
+    for (int i = 0; i < 6; i++) {
+        lis.push_back(distrib(gen));
+    }
+    PrintList(lis);
+
+    std::list<int> negLis = lis;
+    negLis.remove_if([](int n) { return n >= 0; });
+
+    PrintList(negLis);
+
+    lis.erase(std::next(lis.begin(), 4));
+    PrintList(lis);
 }
+
+void PrintList(std::list<Box>& b) {
+    for (Box i : b) {
+        std::cout << i << "\n";
+    }
+    std::cout << std::endl;
+}
+
 void task7() {
     std::cout << "Выполняется Задание №7\n";
+    std::list<Box> boxes = {Box(1, 2, 63), Box(14, 57, 19), Box(7, 32, 20), Box(5, 13, 23), Box(10, 19, 45), Box(19, 9, 59)};
+
+    PrintList(boxes);
+
+    boxes.sort();
+    std::cout << "Самая большая коробка: " << *std::prev(boxes.end()) << std::endl;
 }
 void task8() {
     std::cout << "Выполняется Задание №8\n";
+
+    std::map<char, int> charMap;
+
+    charMap['A'] = int('A');
+    charMap['B'] = int('B');
+    charMap['C'] = int('C');
+    charMap['D'] = int('D');
+    charMap['E'] = int('E');
+
+    for (const auto& [key, value] : charMap) {
+        std::cout << key << " : " << value << std::endl;
+    }
+
+    auto it = charMap.begin();
+    std::advance(it, 1);
+    if (it != charMap.end()) {
+        charMap.erase(it);
+    }
+
+    std::cout << "после удаления" << std::endl;
+    for (const auto& [key, value] : charMap) {
+        std::cout << key << " : " << value << std::endl;
+    }
 }
 void task9() {
     std::cout << "Выполняется Задание №9\n";
