@@ -1,11 +1,14 @@
 // main.cpp
 #include <iostream>
 #include "tasks.h"
+#include <limits>
 
 int main() {
     int choice;
     std::cout << "Выберите номер задания (1-9): ";
     std::cin >> choice;
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
     switch (choice) {
         case 1: task1(); break;

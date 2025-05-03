@@ -1,0 +1,4 @@
+123abc первая строка
+7seven третья строка
+42 is the answer
+9lives у кота

@@ -190,4 +190,5 @@ CMakeFiles/lab8.dir/main_l8.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/ostream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/istream.tcc \
-  /home/ted/BMSTUproga/Ro-Labs-2025/tasks.h
+  /home/ted/BMSTUproga/Ro-Labs-2025/tasks.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/limits
