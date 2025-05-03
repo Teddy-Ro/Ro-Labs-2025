@@ -4,10 +4,10 @@
 #include <iostream>
 #include <iterator>
 #include <list>
+#include <map>
 #include <random>
 #include <string>
 #include <vector>
-#include <map>
 #include "Box.h"
 #include "Inventory.h"
 
@@ -194,6 +194,33 @@ void task8() {
         std::cout << key << " : " << value << std::endl;
     }
 }
+
 void task9() {
     std::cout << "Выполняется Задание №9\n";
+
+    std::map<std::string, int> Shop1 = {
+        {"банан",       400},
+        {"яблоко",     300},
+        {"апельсин", 200}
+    };
+
+    std::map<std::string, int> Shop2 = {
+        {"банан",   750},
+        {"груша",   20 },
+        {"яблоко", 150}
+    };
+
+    std::vector<std::map<std::string, int>> shops{Shop1, Shop2};
+
+    std::map<std::string, int> totalFruits;
+    for (std::map<std::string, int> i : shops) {
+        for (const auto& [fruit, quantity] : i) {
+            totalFruits[fruit] += quantity;
+        }
+    }
+
+    std::cout << "Общее количество фруктов:" << std::endl;
+    for (const auto& [fruit, quantity] : totalFruits) {
+        std::cout << fruit << " : " << quantity << std::endl;
+    }
 }
