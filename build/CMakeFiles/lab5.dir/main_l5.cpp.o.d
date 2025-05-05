@@ -190,7 +190,7 @@ CMakeFiles/lab5.dir/main_l5.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/ostream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/istream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/istream.tcc \
-  /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.h \
+  /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/algorithm \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_algo.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/algorithmfwd.h \
@@ -201,6 +201,6 @@ CMakeFiles/lab5.dir/main_l5.cpp.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/ranges_algobase.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/execution_defs.h \
-  /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cstring \
-  /usr/include/string.h /usr/include/strings.h
+  /usr/include/string.h /usr/include/strings.h \
+  /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MySet.h
