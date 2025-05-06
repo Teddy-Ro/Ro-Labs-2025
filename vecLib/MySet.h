@@ -118,7 +118,6 @@ class MySet : public MyVector<T> {
     }
 };
 
-// Специализация для char*
 template<>
 class MySet<char*> : public MyVector<char*> {
 protected:
@@ -127,7 +126,7 @@ protected:
     using MyVector<char*>::maxSize;
     using MyVector<char*>::Resize;
 
-    int QikcFind(char* const& element) const { // Исправлено: char* const&
+    int QikcFind(char* const& element) const {
         int left = 0;
         int right = size - 1;
         while (left <= right) {
@@ -149,19 +148,19 @@ protected:
 
     MySet(const MySet& other) : MyVector<char*>(other) {}
 
-    bool IsElement(char* const& element) const { // Исправлено: char* const&
+    bool IsElement(char* const& element) const {
         return QikcFind(element) != -1;
     }
 
 
-    void AddElement(char* const& element) override { // Исправленная сигнатура
+    void AddElement(char* const& element) override {
         if (!IsElement(element)) {
             MyVector<char*>::AddElement(element);
             this->Sort();
         }
     }
 
-    void DeleteElement(char* const& element) override { // Исправленная сигнатура
+    void DeleteElement(char* const& element) override {
         int index = QikcFind(element);
         if (index != -1) {
             delete[] pdata[index];

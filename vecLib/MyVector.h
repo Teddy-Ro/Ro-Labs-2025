@@ -48,7 +48,6 @@ public:
     }
 };
 
-// Явные специализации методов для char* с исправленными сигнатурами
 template<>
 MyVector<char*>::MyVector(const MyVector& other) : maxSize(other.maxSize), size(other.size), pdata(new char*[maxSize]) {
     for (size_t i = 0; i < size; ++i) {
@@ -135,7 +134,6 @@ MyVector<char*>& MyVector<char*>::operator=(const MyVector& other) {
     return *this;
 }
 
-// Общие реализации методов шаблона
 template<typename T>
 void MyVector<T>::Resize(size_t newMaxSize) {
     T* newData = new T[newMaxSize];
