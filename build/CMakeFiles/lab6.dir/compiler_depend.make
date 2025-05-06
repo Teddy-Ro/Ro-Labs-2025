@@ -98,6 +98,7 @@ CMakeFiles/lab6.dir/main_l6.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l6.cpp
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
   /usr/include/c++/13/new \
   /usr/include/c++/13/numbers \
   /usr/include/c++/13/ostream \
@@ -537,6 +538,14 @@ CMakeFiles/lab6.dir/main_l6.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l6.cpp
 
 /usr/include/c++/13/bits/stl_tempbuf.h:
 
+/usr/include/endian.h:
+
+/usr/include/c++/13/bits/max_size_type.h:
+
+/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.h:
+
+/usr/include/c++/13/bits/streambuf.tcc:
+
 /usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
@@ -607,6 +616,8 @@ CMakeFiles/lab6.dir/main_l6.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l6.cpp
 
 /usr/include/c++/13/initializer_list:
 
+/usr/include/c++/13/limits:
+
 /usr/include/c++/13/bits/streambuf_iterator.h:
 
 /usr/include/c++/13/ostream:
@@ -648,11 +659,3 @@ CMakeFiles/lab6.dir/main_l6.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l6.cpp
 /usr/include/c++/13/pstl/execution_defs.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h:
-
-/usr/include/c++/13/bits/max_size_type.h:
-
-/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.h:
-
-/usr/include/c++/13/bits/streambuf.tcc:
-
-/usr/include/endian.h:

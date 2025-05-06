@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "new": "cpp",
         "array": "cpp",
         "atomic": "cpp",
         "bit": "cpp",
@@ -40,12 +41,14 @@
         "iostream": "cpp",
         "istream": "cpp",
         "limits": "cpp",
-        "new": "cpp",
         "numbers": "cpp",
         "ostream": "cpp",
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "fstream": "cpp"
     }
 }

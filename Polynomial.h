@@ -1,4 +1,3 @@
-// Polynomial.h
 #ifndef POLYNOMIAL_H
 #define POLYNOMIAL_H
 
@@ -7,16 +6,13 @@
 
 class Polynomial {
 private:
-    MyVector<Term> terms; // Хранение термов
+    MyVector<Term> terms;
 
     void simplify() {
-        // Сортировка термов по убыванию степени
         for (size_t i = 0; i < terms.GetSize(); ++i) {
             for (size_t j = i + 1; j < terms.GetSize(); ++j) {
                 if (terms[i].exponent < terms[j].exponent) {
-                    Term temp = terms[i];
-                    terms[i] = terms[j];
-                    terms[j] = temp;
+                    std::swap(terms[i], terms[j]);
                 }
             }
         }
@@ -47,6 +43,41 @@ public:
         terms.AddElement(term);
         simplify();
         return *this;
+    }
+
+    Polynomial operator+(const Polynomial& other) const {
+        Polynomial result(*this);
+        for (size_t i = 0; i < other.terms.GetSize(); ++i) {
+            result += other.terms[i];
+        }
+        result.simplify();
+        return result;
+    }
+
+    Polynomial operator-(const Polynomial& other) const {
+        Polynomial result(*this);
+        for (size_t i = 0; i < other.terms.GetSize(); ++i) {
+            Term neg_term = other.terms[i];
+            neg_term.coefficient *= -1;
+            result += neg_term;
+        }
+        result.simplify();
+        return result;
+    }
+
+    Polynomial operator*(const Polynomial& other) const {
+        Polynomial result;
+        for (size_t i = 0; i < terms.GetSize(); ++i) {
+            for (size_t j = 0; j < other.terms.GetSize(); ++j) {
+                Term product(
+                    terms[i].getCoefficient() * other.terms[j].getCoefficient(),
+                    terms[i].getExponent() + other.terms[j].getExponent()
+                );
+                result += product;
+            }
+        }
+        result.simplify();
+        return result;
     }
 
     friend std::istream& operator>>(std::istream& is, Polynomial& poly) {

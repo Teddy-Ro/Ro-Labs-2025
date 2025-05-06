@@ -1,26 +1,23 @@
-// Term.h
 #ifndef TERM_H
 #define TERM_H
 
-#include <iostream>
 #include <cctype>
+#include <iostream>
 #include <stdexcept>
 
 class Term {
-private:
+ private:
     int coefficient;
     int exponent;
 
-    // Парсинг терма из потока
     void parseTerm(std::istream& is) {
         coefficient = 0;
         exponent = 0;
         int sign = 1;
+        int expSign = 1;
 
-        // Пропуск пробелов
         while (is.peek() == ' ') is.get();
 
-        // Обработка знака
         if (is.peek() == '-') {
             sign = -1;
             is.get();
@@ -30,34 +27,46 @@ private:
 
         while (is.peek() == ' ') is.get();
 
-        // Чтение коэффициента
         if (isdigit(is.peek())) {
             is >> coefficient;
             coefficient *= sign;
         } else {
-            coefficient = sign * 1; // Например, "x" → 1x^1
+            coefficient = sign * 1;
         }
 
-        // Пропуск пробелов
         while (is.peek() == ' ') is.get();
 
-        // Обработка переменной 'x'
         if (is.peek() == 'x') {
             is.get();
             exponent = 1;
 
-            // Пропуск пробелов
             while (is.peek() == ' ') is.get();
 
-            // Обработка степени (если есть '^')
             if (is.peek() == '^') {
                 is.get();
-                is >> exponent;
+                while (is.peek() == ' ') is.get();
+
+                if (is.peek() == '-') {
+                    expSign = -1;
+                    is.get();
+                } else if (is.peek() == '+') {
+                    is.get();
+                }
+
+                if (isdigit(is.peek())) {
+                    is >> exponent;
+                    exponent *= expSign;
+                } else {
+                    throw std::invalid_argument("Invalid exponent");
+                }
             }
+        } else {
+            exponent = 0;
         }
+        while (is.peek() == ' ') is.get();
     }
 
-public:
+ public:
     Term(int coeff = 0, int exp = 0) : coefficient(coeff), exponent(exp) {}
 
     int getCoefficient() const { return coefficient; }
@@ -69,9 +78,7 @@ public:
         return Term(coefficient + other.coefficient, exponent);
     }
 
-    bool operator==(const Term& other) const {
-        return (coefficient == other.coefficient) && (exponent == other.exponent);
-    }
+    bool operator==(const Term& other) const { return (coefficient == other.coefficient) && (exponent == other.exponent); }
 
     friend std::istream& operator>>(std::istream& is, Term& term) {
         term.parseTerm(is);
@@ -84,7 +91,6 @@ public:
             return os;
         }
 
-        // Вывод коэффициента
         if (term.coefficient != 1 || term.exponent == 0) {
             if (term.coefficient == -1 && term.exponent != 0)
                 os << "-";
@@ -92,10 +98,9 @@ public:
                 os << term.coefficient;
         }
 
-        // Вывод переменной и степени
-        if (term.exponent > 0) {
+        if (term.exponent != 0) {
             os << "x";
-            if (term.exponent > 1)
+            if (term.exponent > 1 || term.exponent < 0)
                 os << "^" << term.exponent;
         }
 
@@ -105,4 +110,4 @@ public:
     friend class Polynomial;
 };
 
-#endif // TERM_H
+#endif  // TERM_H

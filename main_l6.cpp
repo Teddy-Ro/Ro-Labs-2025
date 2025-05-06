@@ -1,18 +1,35 @@
 #include <iostream>
-#include "Term.h"
+#include <limits>
 #include "Polynomial.h"
+#include "Term.h"
 
 int main() {
-    // Пример работы с Term
-    Term t1(3, 2), t2(-1, 2);
-    Term t3 = t1 + t2;
-    std::cout << t3 << std::endl; // 2x^2
+    try {
+    Polynomial p1, p2;
 
-    // Пример работы с Polynomial
-    Polynomial p1;
-    std::cout << "Enter polynomial: ";
+    std::cout << "первый полином: ";
     std::cin >> p1;
-    std::cout << "Polynomial: " << p1 << std::endl;
+    std::cout << p1 << std::endl;
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    std::cout << "второй полином: ";
+    std::cin >> p2;
+    std::cout << p2 << std::endl;
+
+    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+    Polynomial sum = p1 + p2;
+    Polynomial diff = p1 - p2;
+    Polynomial product = p1 * p2;
+
+    std::cout << "+: " << sum << std::endl;
+    std::cout << "-: " << diff << std::endl;
+    std::cout << "*: " << product << std::endl;
+    }
+    catch (const std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
 
     return 0;
 }
