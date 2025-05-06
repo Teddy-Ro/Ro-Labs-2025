@@ -1,4 +1,3 @@
-// main.cpp
 #include <iostream>
 #include "vecLib/MyVector.h"
 #include "vecLib/MySet.h"

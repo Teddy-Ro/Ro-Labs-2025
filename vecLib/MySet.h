@@ -1,4 +1,3 @@
-// MySet.h
 #ifndef MYSET_H
 #define MYSET_H
 
