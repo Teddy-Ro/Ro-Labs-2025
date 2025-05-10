@@ -1,7 +1,7 @@
 123abc первая строка
 abc123 вторая строка
-7seven третья строка
+7s  even третья строка
 hello world
-42 is the answer
+ 42 is the answer
 no digits here
 9lives у кота

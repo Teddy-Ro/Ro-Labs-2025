@@ -1,4 +1,3 @@
 123abc первая строка
-7seven третья строка
-42 is the answer
+7s  even третья строка
 9lives у кота

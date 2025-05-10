@@ -35,14 +35,29 @@ void task2() {
     std::cout << "введите текст \n";
     std::getline(std::cin, str);
 
-    int a = str.find(" ");
-    int b = str.find(".");
-    // std::cout << a << "\n" << b << std::endl;
+    std::string::size_type a = str.find(" ");
+    std::string::size_type b = str.find(".");
 
-    if ((b - a > 0) && (a * b > 0)) {
-        std::string newStr = str.substr(a, b - a);
-        std::cout << newStr << std::endl;
+    if ((a == std::string::npos) && (b == std::string::npos)) {
+        std::cout << "Ошибка: в тексте отсутствует пробел и точка." << std::endl;
+        return;
     }
+
+    if (a == std::string::npos) {
+        std::cout << "Ошибка: в тексте отсутствует пробел." << std::endl;
+        return;
+    }
+    if (b == std::string::npos) {
+        std::cout << "Ошибка: в тексте отсутствует точка." << std::endl;
+        return;
+    }
+    if (b - a <= 0) {
+        std::cout << "Ошибка: точка должна идти после пробела." << std::endl;
+        return;
+    }
+
+    std::string newStr = str.substr(a, b - a);
+    std::cout << "Результат: " << newStr << std::endl;
 }
 void task3() {
     std::cout << "Выполняется Задание №3\n";
@@ -61,8 +76,8 @@ void task3() {
     numStr.close();
 }
 
-void PrintVec(const std::vector<int>& v) {
-    for (int i : v) {
+void PrintVec(const std::vector<double>& v) {
+    for (double i : v) {
         std::cout << i << "\n";
     }
     std::cout << std::endl;
@@ -73,23 +88,25 @@ void task4() {
 
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(-100, 100);
+    std::uniform_real_distribution<double> distrib(-100.0, 100.0);
 
-    std::vector<int> vec;
+    std::vector<double> vec;
     for (int i = 0; i < 6; i++) {
         vec.push_back(distrib(gen));
     }
     PrintVec(vec);
 
-    std::vector<int> vec2;
-    for (int i : vec) {
+    std::vector<double> vec2;
+    for (double i : vec) {
         if (i < 0) {
             vec2.push_back(i);
         }
     }
     PrintVec(vec2);
 
-    vec.erase(vec.begin() + 4);
+    if (vec.size() > 4) {
+        vec.erase(vec.begin() + 4);
+    }
     PrintVec(vec);
 }
 
@@ -124,8 +141,8 @@ void task5() {
     PrintVec(absent);
 }
 
-void PrintList(std::list<int>& l) {
-    for (int i : l) {
+void PrintList(const std::list<double>& l) {
+    for (double i : l) {
         std::cout << i << "\n";
     }
     std::cout << std::endl;
@@ -135,20 +152,22 @@ void task6() {
     std::cout << "Выполняется Задание №6\n";
     std::random_device rd;
     std::mt19937 gen(rd());
-    std::uniform_int_distribution<> distrib(-100, 100);
+    std::uniform_real_distribution<double> distrib(-100.0, 100.0);
 
-    std::list<int> lis;
+    std::list<double> lis;
     for (int i = 0; i < 6; i++) {
         lis.push_back(distrib(gen));
     }
     PrintList(lis);
 
-    std::list<int> negLis = lis;
-    negLis.remove_if([](int n) { return n >= 0; });
+    std::list<double> negLis = lis;
+    negLis.remove_if([](double n) { return n >= 0; });
 
     PrintList(negLis);
 
-    lis.erase(std::next(lis.begin(), 4));
+    if (lis.size() > 4) {
+        lis.erase(std::next(lis.begin(), 4));
+    }
     PrintList(lis);
 }
 
@@ -224,3 +243,4 @@ void task9() {
         std::cout << fruit << " : " << quantity << std::endl;
     }
 }
+// ситуации пробелы и точка, веществ
