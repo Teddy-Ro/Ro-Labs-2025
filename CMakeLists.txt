@@ -7,8 +7,6 @@ set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
 set(SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/main_l6.cpp
-    # ${CMAKE_CURRENT_SOURCE_DIR}/Polynomial.cpp
-    # ${CMAKE_CURRENT_SOURCE_DIR}/term.cpp
 )
 
 add_subdirectory(vecLib)
