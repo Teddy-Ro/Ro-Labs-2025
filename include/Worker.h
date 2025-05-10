@@ -3,14 +3,17 @@
 
 #include "Staff.h"
 #include <iostream>
+#include <cstring>
 
 class Worker : public Staff {
 protected:
-    std::string position;
+    char position[100];
 
 public:
-    Worker(const std::string& n, int a, const std::string& pos)
-        : Staff(n, a), position(pos) {
+    Worker(const char* n, int a, const char* pos)
+        : Staff(n, a) {
+        strncpy(position, pos, 99);
+        position[99] = '\0';
         std::cout << "Worker()" << std::endl;
     }
 

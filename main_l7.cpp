@@ -4,10 +4,10 @@
 #include "Administration.h"
 #include <iostream>
 #include <limits>
+#include <cstring>
 
 using namespace std;
 
-// Функции print, remove, clear
 void print(const MyVector<Staff*>& container) {
     if (container.GetSize() == 0) {
         cout << "Container is empty!" << endl;
@@ -37,9 +37,14 @@ void clear(MyVector<Staff*>& container) {
 
 int main() {
     MyVector<Staff*> container;
-    int choice;
+    int choice = -1;
+    char name[100];
+    char position[100];
+    char department[100];
+    char role[100];
+    int age;
 
-    do {
+    while (choice != 0) {
         cout << "\nMenu:\n"
              << "1. Add Worker\n"
              << "2. Add Engineer\n"
@@ -54,32 +59,26 @@ int main() {
 
         switch (choice) {
             case 1: {
-                string name, position;
-                int age;
-                cout << "Enter name: "; getline(cin, name);
+                cout << "Enter name: "; cin.getline(name, 100);
                 cout << "Enter age: "; cin >> age;
                 cin.ignore();
-                cout << "Enter position: "; getline(cin, position);
+                cout << "Enter position: "; cin.getline(position, 100);
                 container.AddElement(new Worker(name, age, position));
                 break;
             }
             case 2: {
-                string name, department;
-                int age;
-                cout << "Enter name: "; getline(cin, name);
+                cout << "Enter name: "; cin.getline(name, 100);
                 cout << "Enter age: "; cin >> age;
                 cin.ignore();
-                cout << "Enter department: "; getline(cin, department);
+                cout << "Enter department: "; cin.getline(department, 100);
                 container.AddElement(new Engineer(name, age, department));
                 break;
             }
             case 3: {
-                string name, role;
-                int age;
-                cout << "Enter name: "; getline(cin, name);
+                cout << "Enter name: "; cin.getline(name, 100);
                 cout << "Enter age: "; cin >> age;
                 cin.ignore();
-                cout << "Enter role: "; getline(cin, role);
+                cout << "Enter role: "; cin.getline(role, 100);
                 container.AddElement(new Administration(name, age, role));
                 break;
             }
@@ -101,7 +100,7 @@ int main() {
             default:
                 cout << "Invalid choice!" << endl;
         }
-    } while (choice != 0);
+    }
 
     return 0;
 }

@@ -3,14 +3,17 @@
 
 #include "Staff.h"
 #include <iostream>
+#include <cstring>
 
 class Administration : public Staff {
 protected:
-    std::string role;
+    char role[100];
 
 public:
-    Administration(const std::string& n, int a, const std::string& r)
-        : Staff(n, a), role(r) {
+    Administration(const char* n, int a, const char* r)
+        : Staff(n, a) {
+        strncpy(role, r, 99);
+        role[99] = '\0';
         std::cout << "Administration()" << std::endl;
     }
 

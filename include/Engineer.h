@@ -3,14 +3,17 @@
 
 #include "Staff.h"
 #include <iostream>
+#include <cstring>
 
 class Engineer : public Staff {
 protected:
-    std::string department;
+    char department[100];
 
 public:
-    Engineer(const std::string& n, int a, const std::string& dep)
-        : Staff(n, a), department(dep) {
+    Engineer(const char* n, int a, const char* dep)
+        : Staff(n, a) {
+        strncpy(department, dep, 99);
+        department[99] = '\0';
         std::cout << "Engineer()" << std::endl;
     }
 

@@ -2,15 +2,17 @@
 #define STAFF_H
 
 #include <iostream>
-#include <string>
+#include <cstring>
 
 class Staff {
 protected:
-    std::string name;
+    char name[100];
     int age;
 
 public:
-    Staff(const std::string& n, int a) : name(n), age(a) {
+    Staff(const char* n, int a) : age(a) {
+        strncpy(name, n, 99);
+        name[99] = '\0';
         std::cout << "Staff()" << std::endl;
     }
 
