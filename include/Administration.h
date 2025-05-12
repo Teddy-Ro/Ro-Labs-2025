@@ -22,8 +22,8 @@ public:
     }
 
     void show() const override {
-        std::cout << "Administration: " << name << ", Age: " << age
-                  << ", Role: " << role << std::endl;
+        std::cout << "администратор: " << name << ", возраст: " << age
+                  << ", роль: " << role << std::endl;
     }
 };
 

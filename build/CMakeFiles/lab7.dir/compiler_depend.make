@@ -223,14 +223,6 @@ CMakeFiles/lab7.dir/main_l7.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp
   /usr/lib/llvm-18/lib/clang/18/include/stdarg.h \
   /usr/lib/llvm-18/lib/clang/18/include/stddef.h
 
-CMakeFiles/lab7.dir/src/Administration.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp
-
-CMakeFiles/lab7.dir/src/Engineer.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp
-
-CMakeFiles/lab7.dir/src/Staff.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp
-
-CMakeFiles/lab7.dir/src/Worker.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp
-
 
 /usr/lib/llvm-18/lib/clang/18/include/stdarg.h:
 
@@ -256,8 +248,6 @@ CMakeFiles/lab7.dir/src/Worker.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Work
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
-/home/ted/BMSTUproga/Ro-Labs-2025/src/Administration.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
@@ -275,8 +265,6 @@ CMakeFiles/lab7.dir/src/Worker.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Work
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/home/ted/BMSTUproga/Ro-Labs-2025/src/Staff.cpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
 
@@ -468,8 +456,6 @@ CMakeFiles/lab7.dir/src/Worker.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Work
 
 /usr/include/c++/13/bits/string_view.tcc:
 
-/home/ted/BMSTUproga/Ro-Labs-2025/src/Engineer.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/13/cstddef:
@@ -577,8 +563,6 @@ CMakeFiles/lab7.dir/src/Worker.cpp.o: /home/ted/BMSTUproga/Ro-Labs-2025/src/Work
 /usr/include/c++/13/bits/stringfwd.h:
 
 /usr/include/c++/13/bits/uniform_int_dist.h:
-
-/home/ted/BMSTUproga/Ro-Labs-2025/src/Worker.cpp:
 
 /usr/include/c++/13/bits/std_abs.h:
 

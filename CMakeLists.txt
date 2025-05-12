@@ -7,10 +7,6 @@ set(CMAKE_CXX_CLANG_TIDY "clang-tidy")
 
 # Source files
 set(SOURCES
-    src/Staff.cpp
-    src/Worker.cpp
-    src/Engineer.cpp
-    src/Administration.cpp
     main_l7.cpp
 )
 

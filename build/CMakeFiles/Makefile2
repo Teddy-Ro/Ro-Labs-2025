@@ -99,12 +99,12 @@ vecLib/clean: vecLib/CMakeFiles/vecLib.dir/clean
 CMakeFiles/lab7.dir/all: vecLib/CMakeFiles/vecLib.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2,3,4,5,6 "Built target lab7"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=1,2 "Built target lab7"
 .PHONY : CMakeFiles/lab7.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/lab7.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/lab7.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles 0
 .PHONY : CMakeFiles/lab7.dir/rule
@@ -151,7 +151,7 @@ CMakeFiles/clang-format.dir/clean:
 vecLib/CMakeFiles/vecLib.dir/all:
 	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/depend
 	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=7,8 "Built target vecLib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles --progress-num=3,4 "Built target vecLib"
 .PHONY : vecLib/CMakeFiles/vecLib.dir/all
 
 # Build rule for subdir invocation for target.

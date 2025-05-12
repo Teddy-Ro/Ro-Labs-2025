@@ -179,102 +179,6 @@ main_l7.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/main_l7.cpp.s
 .PHONY : main_l7.cpp.s
 
-src/Administration.o: src/Administration.cpp.o
-.PHONY : src/Administration.o
-
-# target to build an object file
-src/Administration.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Administration.cpp.o
-.PHONY : src/Administration.cpp.o
-
-src/Administration.i: src/Administration.cpp.i
-.PHONY : src/Administration.i
-
-# target to preprocess a source file
-src/Administration.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Administration.cpp.i
-.PHONY : src/Administration.cpp.i
-
-src/Administration.s: src/Administration.cpp.s
-.PHONY : src/Administration.s
-
-# target to generate assembly for a file
-src/Administration.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Administration.cpp.s
-.PHONY : src/Administration.cpp.s
-
-src/Engineer.o: src/Engineer.cpp.o
-.PHONY : src/Engineer.o
-
-# target to build an object file
-src/Engineer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Engineer.cpp.o
-.PHONY : src/Engineer.cpp.o
-
-src/Engineer.i: src/Engineer.cpp.i
-.PHONY : src/Engineer.i
-
-# target to preprocess a source file
-src/Engineer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Engineer.cpp.i
-.PHONY : src/Engineer.cpp.i
-
-src/Engineer.s: src/Engineer.cpp.s
-.PHONY : src/Engineer.s
-
-# target to generate assembly for a file
-src/Engineer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Engineer.cpp.s
-.PHONY : src/Engineer.cpp.s
-
-src/Staff.o: src/Staff.cpp.o
-.PHONY : src/Staff.o
-
-# target to build an object file
-src/Staff.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Staff.cpp.o
-.PHONY : src/Staff.cpp.o
-
-src/Staff.i: src/Staff.cpp.i
-.PHONY : src/Staff.i
-
-# target to preprocess a source file
-src/Staff.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Staff.cpp.i
-.PHONY : src/Staff.cpp.i
-
-src/Staff.s: src/Staff.cpp.s
-.PHONY : src/Staff.s
-
-# target to generate assembly for a file
-src/Staff.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Staff.cpp.s
-.PHONY : src/Staff.cpp.s
-
-src/Worker.o: src/Worker.cpp.o
-.PHONY : src/Worker.o
-
-# target to build an object file
-src/Worker.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Worker.cpp.o
-.PHONY : src/Worker.cpp.o
-
-src/Worker.i: src/Worker.cpp.i
-.PHONY : src/Worker.i
-
-# target to preprocess a source file
-src/Worker.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Worker.cpp.i
-.PHONY : src/Worker.cpp.i
-
-src/Worker.s: src/Worker.cpp.s
-.PHONY : src/Worker.s
-
-# target to generate assembly for a file
-src/Worker.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/src/Worker.cpp.s
-.PHONY : src/Worker.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -289,18 +193,6 @@ help:
 	@echo "... main_l7.o"
 	@echo "... main_l7.i"
 	@echo "... main_l7.s"
-	@echo "... src/Administration.o"
-	@echo "... src/Administration.i"
-	@echo "... src/Administration.s"
-	@echo "... src/Engineer.o"
-	@echo "... src/Engineer.i"
-	@echo "... src/Engineer.s"
-	@echo "... src/Staff.o"
-	@echo "... src/Staff.i"
-	@echo "... src/Staff.s"
-	@echo "... src/Worker.o"
-	@echo "... src/Worker.i"
-	@echo "... src/Worker.s"
 .PHONY : help
 
 

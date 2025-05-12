@@ -1,20 +1,20 @@
-#include "vecLib/MyVector.h"
-#include "Worker.h"
-#include "Engineer.h"
-#include "Administration.h"
+#include <cstring>
 #include <iostream>
 #include <limits>
-#include <cstring>
+#include "Administration.h"
+#include "Engineer.h"
+#include "Worker.h"
+#include "vecLib/MyVector.h"
 
 using namespace std;
 
 void print(const MyVector<Staff*>& container) {
     if (container.GetSize() == 0) {
-        cout << "Container is empty!" << endl;
+        cout << "Контейнер пуст!" << endl;
         return;
     }
     for (size_t i = 0; i < container.GetSize(); ++i) {
-        cout << "Index " << i << ": ";
+        cout << "index " << i << ": ";
         container[i]->show();
     }
 }
@@ -45,40 +45,49 @@ int main() {
     int age;
 
     while (choice != 0) {
-        cout << "\nMenu:\n"
-             << "1. Add Worker\n"
-             << "2. Add Engineer\n"
-             << "3. Add Administration\n"
-             << "4. Print all\n"
-             << "5. Remove by index\n"
-             << "6. Clear container\n"
-             << "0. Exit\n"
-             << "Enter choice: ";
+        cout << "\nМеню:\n"
+             << "1. Добавить рабочего\n"
+             << "2. Добавить инженера\n"
+             << "3. Добавить администратора\n"
+             << "4. Вывести всех\n"
+             << "5. Удалить по индексу\n"
+             << "6. Очистить контейнер\n"
+             << "0. Выход\n"
+             << "Выберите действие: ";
         cin >> choice;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         switch (choice) {
             case 1: {
-                cout << "Enter name: "; cin.getline(name, 100);
-                cout << "Enter age: "; cin >> age;
+                cout << "Введите имя: ";
+                cin.getline(name, 100);
+                cout << "Введите возраст: ";
+                cin >> age;
                 cin.ignore();
-                cout << "Enter position: "; cin.getline(position, 100);
+                cout << "Введите должность: ";
+                cin.getline(position, 100);
                 container.AddElement(new Worker(name, age, position));
                 break;
             }
             case 2: {
-                cout << "Enter name: "; cin.getline(name, 100);
-                cout << "Enter age: "; cin >> age;
+                cout << "Введите имя: ";
+                cin.getline(name, 100);
+                cout << "Введите возраст: ";
+                cin >> age;
                 cin.ignore();
-                cout << "Enter department: "; cin.getline(department, 100);
+                cout << "Введите отдел: ";
+                cin.getline(department, 100);
                 container.AddElement(new Engineer(name, age, department));
                 break;
             }
             case 3: {
-                cout << "Enter name: "; cin.getline(name, 100);
-                cout << "Enter age: "; cin >> age;
+                cout << "Введите имя: ";
+                cin.getline(name, 100);
+                cout << "Введите возраст: ";
+                cin >> age;
                 cin.ignore();
-                cout << "Enter role: "; cin.getline(role, 100);
+                cout << "Введите роль: ";
+                cin.getline(role, 100);
                 container.AddElement(new Administration(name, age, role));
                 break;
             }
@@ -87,7 +96,8 @@ int main() {
                 break;
             case 5: {
                 size_t index;
-                cout << "Enter index: "; cin >> index;
+                cout << "Введите индекс: ";
+                cin >> index;
                 remove(container, index);
                 break;
             }
@@ -98,9 +108,10 @@ int main() {
                 clear(container);
                 break;
             default:
-                cout << "Invalid choice!" << endl;
+                cout << "Неверный выбор!" << endl;
         }
     }
+
 
     return 0;
 }

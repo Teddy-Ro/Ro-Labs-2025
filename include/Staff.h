@@ -20,7 +20,7 @@ public:
         std::cout << "~Staff()" << std::endl;
     }
 
-    virtual void show() const = 0; // Чисто виртуальная функция
+    virtual void show() const = 0;
 };
 
 #endif
