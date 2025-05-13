@@ -67,7 +67,7 @@ include CMakeFiles/clang-format.dir/compiler_depend.make
 include CMakeFiles/clang-format.dir/progress.make
 
 CMakeFiles/clang-format:
-	clang-format --dry-run -Werror /home/ted/BMSTUproga/Ro-Labs-2025/Box.h /home/ted/BMSTUproga/Ro-Labs-2025/Inventory.h /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp /home/ted/BMSTUproga/Ro-Labs-2025/main_l8.cpp /home/ted/BMSTUproga/Ro-Labs-2025/tasks.cpp /home/ted/BMSTUproga/Ro-Labs-2025/tasks.h
+	clang-format --dry-run -Werror /home/ted/BMSTUproga/Ro-Labs-2025/Box.h /home/ted/BMSTUproga/Ro-Labs-2025/Inventory.h /home/ted/BMSTUproga/Ro-Labs-2025/build/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.cpp /home/ted/BMSTUproga/Ro-Labs-2025/include/Staff.h /home/ted/BMSTUproga/Ro-Labs-2025/main_l8.cpp /home/ted/BMSTUproga/Ro-Labs-2025/tasks.cpp /home/ted/BMSTUproga/Ro-Labs-2025/tasks.h
 
 clang-format: CMakeFiles/clang-format
 clang-format: CMakeFiles/clang-format.dir/build.make

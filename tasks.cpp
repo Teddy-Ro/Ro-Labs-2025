@@ -57,7 +57,7 @@ void task2() {
     }
 
     std::string newStr = str.substr(a, b - a);
-    std::cout << "Результат: " << newStr << std::endl;
+    std::cout << "Результат:" << newStr << std::endl;
 }
 void task3() {
     std::cout << "Выполняется Задание №3\n";
@@ -243,4 +243,3 @@ void task9() {
         std::cout << fruit << " : " << quantity << std::endl;
     }
 }
-// ситуации пробелы и точка, веществ
