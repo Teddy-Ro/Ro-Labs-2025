@@ -142,18 +142,29 @@ clang-format/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clang-format.dir/build.make CMakeFiles/clang-format.dir/build
 .PHONY : clang-format/fast
 
-#=============================================================================
-# Target rules for targets named vecLib
+lib/stack.o: lib/stack.cpp.o
+.PHONY : lib/stack.o
 
-# Build rule for target.
-vecLib: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vecLib
-.PHONY : vecLib
+# target to build an object file
+lib/stack.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/lib/stack.cpp.o
+.PHONY : lib/stack.cpp.o
 
-# fast build rule for target.
-vecLib/fast:
-	$(MAKE) $(MAKESILENT) -f vecLib/CMakeFiles/vecLib.dir/build.make vecLib/CMakeFiles/vecLib.dir/build
-.PHONY : vecLib/fast
+lib/stack.i: lib/stack.cpp.i
+.PHONY : lib/stack.i
+
+# target to preprocess a source file
+lib/stack.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/lib/stack.cpp.i
+.PHONY : lib/stack.cpp.i
+
+lib/stack.s: lib/stack.cpp.s
+.PHONY : lib/stack.s
+
+# target to generate assembly for a file
+lib/stack.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lab7.dir/build.make CMakeFiles/lab7.dir/lib/stack.cpp.s
+.PHONY : lib/stack.cpp.s
 
 main_l7.o: main_l7.cpp.o
 .PHONY : main_l7.o
@@ -189,7 +200,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... clang-format"
 	@echo "... lab7"
-	@echo "... vecLib"
+	@echo "... lib/stack.o"
+	@echo "... lib/stack.i"
+	@echo "... lib/stack.s"
 	@echo "... main_l7.o"
 	@echo "... main_l7.i"
 	@echo "... main_l7.s"

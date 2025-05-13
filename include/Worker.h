@@ -2,28 +2,27 @@
 #define WORKER_H
 
 #include "Staff.h"
-#include <iostream>
 #include <cstring>
 
 class Worker : public Staff {
 protected:
-    char position[100];
-
+    char* position;
 public:
     Worker(const char* n, int a, const char* pos)
         : Staff(n, a) {
-        strncpy(position, pos, 99);
-        position[99] = '\0';
-        std::cout << "Worker()" << std::endl;
+        position = new char[strlen(pos) + 1];
+        strcpy(position, pos);
+        std::cout << "Administration()" << std::endl;
     }
 
     ~Worker() override {
-        std::cout << "~Worker()" << std::endl;
+        delete[] position;
+        std::cout << "~Administration()" << std::endl;
     }
 
     void show() const override {
         std::cout << "Рабочий: " << name << ", возраст: " << age
-                  << ", позиция: " << position << std::endl;
+            << ", должность: " << position << std::endl;
     }
 };
 

@@ -2,28 +2,28 @@
 #define ENGINEER_H
 
 #include "Staff.h"
-#include <iostream>
 #include <cstring>
+#include <iostream>
 
 class Engineer : public Staff {
 protected:
-    char department[100];
-
+    char* department;
 public:
     Engineer(const char* n, int a, const char* dep)
         : Staff(n, a) {
-        strncpy(department, dep, 99);
-        department[99] = '\0';
+        department = new char[strlen(dep) + 1];
+        strcpy(department, dep);
         std::cout << "Engineer()" << std::endl;
     }
 
     ~Engineer() override {
+        delete[] department;
         std::cout << "~Engineer()" << std::endl;
     }
 
     void show() const override {
         std::cout << "Инженер: " << name << ", возраст: " << age
-                  << ", отдел: " << department << std::endl;
+            << ", отдел: " << department << std::endl;
     }
 };
 

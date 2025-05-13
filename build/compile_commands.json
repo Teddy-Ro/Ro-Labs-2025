@@ -1,14 +1,14 @@
 [
 {
   "directory": "/home/ted/BMSTUproga/Ro-Labs-2025/build",
-  "command": "/usr/bin/clang++-18  -I/home/ted/BMSTUproga/Ro-Labs-2025/include -g -std=gnu++20 -Wall -Wextra -Werror -Wpedantic -o CMakeFiles/lab7.dir/main_l7.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp",
+  "command": "/usr/bin/clang++-18  -I/home/ted/BMSTUproga/Ro-Labs-2025/lib -I/home/ted/BMSTUproga/Ro-Labs-2025/include -g -std=gnu++20 -Wall -Wextra -Wpedantic -o CMakeFiles/lab7.dir/main_l7.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp",
   "file": "/home/ted/BMSTUproga/Ro-Labs-2025/main_l7.cpp",
   "output": "CMakeFiles/lab7.dir/main_l7.cpp.o"
 },
 {
-  "directory": "/home/ted/BMSTUproga/Ro-Labs-2025/build/vecLib",
-  "command": "/usr/bin/clang++-18  -I/home/ted/BMSTUproga/Ro-Labs-2025/include -g -std=gnu++17 -o CMakeFiles/vecLib.dir/MyVector.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp",
-  "file": "/home/ted/BMSTUproga/Ro-Labs-2025/vecLib/MyVector.cpp",
-  "output": "vecLib/CMakeFiles/vecLib.dir/MyVector.cpp.o"
+  "directory": "/home/ted/BMSTUproga/Ro-Labs-2025/build",
+  "command": "/usr/bin/clang++-18  -I/home/ted/BMSTUproga/Ro-Labs-2025/lib -I/home/ted/BMSTUproga/Ro-Labs-2025/include -g -std=gnu++20 -Wall -Wextra -Wpedantic -o CMakeFiles/lab7.dir/lib/stack.cpp.o -c /home/ted/BMSTUproga/Ro-Labs-2025/lib/stack.cpp",
+  "file": "/home/ted/BMSTUproga/Ro-Labs-2025/lib/stack.cpp",
+  "output": "CMakeFiles/lab7.dir/lib/stack.cpp.o"
 }
 ]

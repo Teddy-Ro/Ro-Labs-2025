@@ -2,28 +2,27 @@
 #define ADMINISTRATION_H
 
 #include "Staff.h"
-#include <iostream>
 #include <cstring>
 
 class Administration : public Staff {
 protected:
-    char role[100];
-
+    char* role;
 public:
     Administration(const char* n, int a, const char* r)
         : Staff(n, a) {
-        strncpy(role, r, 99);
-        role[99] = '\0';
+        role = new char[strlen(r) + 1];
+        strcpy(role, r);
         std::cout << "Administration()" << std::endl;
     }
 
     ~Administration() override {
+        delete[] role;
         std::cout << "~Administration()" << std::endl;
     }
 
     void show() const override {
-        std::cout << "администратор: " << name << ", возраст: " << age
-                  << ", роль: " << role << std::endl;
+        std::cout << "Администрация: " << name << ", возраст: " << age
+            << ", роль: " << role << std::endl;
     }
 };
 

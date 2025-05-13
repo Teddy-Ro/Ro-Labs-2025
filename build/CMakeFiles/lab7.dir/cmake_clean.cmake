@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/lab7.dir/lib/stack.cpp.o"
+  "CMakeFiles/lab7.dir/lib/stack.cpp.o.d"
   "CMakeFiles/lab7.dir/main_l7.cpp.o"
   "CMakeFiles/lab7.dir/main_l7.cpp.o.d"
   "lab7"

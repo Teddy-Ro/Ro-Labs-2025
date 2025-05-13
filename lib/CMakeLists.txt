@@ -1,16 +1,15 @@
 cmake_minimum_required(VERSION 3.23)
 
-set(project "vecLib")
+set(project "stack")
 project(${project})
 
 set(CMAKE_CXX_STANDARD 17)
 
 set(${project}_SOURCES
-        MyVector.cpp)
+        stack.cpp)
 
 set(${project}_HEADERS
-        MyVector.h)
-
+        stack.h)
 
 set(${project}_SOURCE_LIST
         ${${project}_SOURCES}

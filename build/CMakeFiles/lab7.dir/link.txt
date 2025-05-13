@@ -1,1 +1,1 @@
-/usr/bin/clang++-18 -g CMakeFiles/lab7.dir/main_l7.cpp.o -o lab7  vecLib/libvecLib.a 
+/usr/bin/clang++-18 -g CMakeFiles/lab7.dir/main_l7.cpp.o CMakeFiles/lab7.dir/lib/stack.cpp.o -o lab7 

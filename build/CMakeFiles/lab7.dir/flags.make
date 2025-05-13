@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/clang++-18
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ted/BMSTUproga/Ro-Labs-2025/include
+CXX_INCLUDES = -I/home/ted/BMSTUproga/Ro-Labs-2025/lib -I/home/ted/BMSTUproga/Ro-Labs-2025/include
 
-CXX_FLAGS = -g -std=gnu++20 -Wall -Wextra -Werror -Wpedantic
+CXX_FLAGS = -g -std=gnu++20 -Wall -Wextra -Wpedantic
 

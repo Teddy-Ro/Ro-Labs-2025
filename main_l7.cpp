@@ -1,103 +1,143 @@
+#include <algorithm>
 #include <cstring>
 #include <iostream>
 #include <limits>
 #include "Administration.h"
 #include "Engineer.h"
 #include "Worker.h"
-#include "vecLib/MyVector.h"
+#include "lib/stack.h"
 
-using namespace std;
-
-void print(const MyVector<Staff*>& container) {
-    if (container.GetSize() == 0) {
-        cout << "Контейнер пуст!" << endl;
+void print(const MyStack<Staff*>& container) {
+    if (container.empty()) {
+        std::cout << "Контейнер пуст!" << std::endl;
         return;
     }
-    for (size_t i = 0; i < container.GetSize(); ++i) {
-        cout << "index " << i << ": ";
-        container[i]->show();
+
+    MyStack<Staff*> temp(container);
+    std::size_t i = 0;
+
+    while (!temp.empty()) {
+        std::cout << "index " << i++ << ": ";
+        temp.topInf()->show();
+        temp.pop();
     }
 }
 
-void remove(MyVector<Staff*>& container, size_t index) {
-    if (index >= container.GetSize()) {
-        cerr << "Invalid index!" << endl;
+void remove(MyStack<Staff*>& container, std::size_t index) {
+    if (container.empty()) {
+        std::cerr << "Контейнер пуст!" << std::endl;
         return;
     }
-    delete container[index];
-    container.DeleteElement(container[index]);
+
+    MyStack<Staff*> temp;
+    std::size_t currentSize = 0;
+
+    MyStack<Staff*> counter(container);
+    while (!counter.empty()) {
+        currentSize++;
+        counter.pop();
+    }
+
+    if (index >= currentSize) {
+        std::cerr << "Invalid index!" << std::endl;
+        return;
+    }
+
+    for (std::size_t i = 0; i < index; ++i) {
+        temp.push(container.topInf());
+        container.pop();
+    }
+
+    Staff* toDelete = container.topInf();
+    container.pop();
+    delete toDelete;
+
+    while (!temp.empty()) {
+        container.push(temp.topInf());
+        temp.pop();
+    }
 }
 
-void clear(MyVector<Staff*>& container) {
-    for (size_t i = 0; i < container.GetSize(); ++i) {
-        delete container[i];
+void clear(MyStack<Staff*>& container) {
+    while (!container.empty()) {
+        Staff* toDelete = container.topInf();
+        container.pop();
+        delete toDelete;
     }
-    container = MyVector<Staff*>();
 }
 
 int main() {
-    MyVector<Staff*> container;
+    MyStack<Staff*> container;
     int choice = -1;
-    char name[100];
-    char position[100];
-    char department[100];
-    char role[100];
-    int age;
+    char bufferName[100];
+    char bufferJob[100];
 
     while (choice != 0) {
-        cout << "\nМеню:\n"
-             << "1. Добавить рабочего\n"
-             << "2. Добавить инженера\n"
-             << "3. Добавить администратора\n"
-             << "4. Вывести всех\n"
-             << "5. Удалить по индексу\n"
-             << "6. Очистить контейнер\n"
-             << "0. Выход\n"
-             << "Выберите действие: ";
-        cin >> choice;
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        std::cout << "\nМеню:\n"
+                  << "1. Добавить рабочего\n"
+                  << "2. Добавить инженера\n"
+                  << "3. Добавить администратора\n"
+                  << "4. Вывести всех\n"
+                  << "5. Удалить по индексу\n"
+                  << "6. Очистить контейнер\n"
+                  << "0. Выход\n"
+                  << "Выберите действие: ";
+        std::cin >> choice;
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
         switch (choice) {
             case 1: {
-                cout << "Введите имя: ";
-                cin.getline(name, 100);
-                cout << "Введите возраст: ";
-                cin >> age;
-                cin.ignore();
-                cout << "Введите должность: ";
-                cin.getline(position, 100);
-                container.AddElement(new Worker(name, age, position));
+                std::cout << "Введите имя: ";
+                std::cin.getline(bufferName, 100);
+
+                std::cout << "Введите возраст: ";
+                int age;
+                std::cin >> age;
+                std::cin.ignore();
+
+                std::cout << "Введите должность: ";
+                std::cin.getline(bufferJob, 100);
+
+                container.push(new Worker(bufferName, age, bufferJob));
                 break;
             }
             case 2: {
-                cout << "Введите имя: ";
-                cin.getline(name, 100);
-                cout << "Введите возраст: ";
-                cin >> age;
-                cin.ignore();
-                cout << "Введите отдел: ";
-                cin.getline(department, 100);
-                container.AddElement(new Engineer(name, age, department));
+                std::cout << "Введите имя: ";
+                std::cin.getline(bufferName, 100);
+
+                std::cout << "Введите возраст: ";
+                int age;
+                std::cin >> age;
+                std::cin.ignore();
+
+                std::cout << "Введите отдел: ";
+                std::cin.getline(bufferJob, 100);
+
+                container.push(new Engineer(bufferName, age, bufferJob));
                 break;
             }
             case 3: {
-                cout << "Введите имя: ";
-                cin.getline(name, 100);
-                cout << "Введите возраст: ";
-                cin >> age;
-                cin.ignore();
-                cout << "Введите роль: ";
-                cin.getline(role, 100);
-                container.AddElement(new Administration(name, age, role));
+                std::cout << "Введите имя: ";
+                std::cin.getline(bufferName, 100);
+
+                std::cout << "Введите возраст: ";
+                int age;
+                std::cin >> age;
+                std::cin.ignore();
+
+                std::cout << "Введите роль: ";
+                std::cin.getline(bufferJob, 100);
+
+                container.push(new Administration(bufferName, age, bufferJob));
                 break;
             }
             case 4:
                 print(container);
                 break;
             case 5: {
-                size_t index;
-                cout << "Введите индекс: ";
-                cin >> index;
+                std::size_t index;
+                std::cout << "Введите индекс: ";
+                std::cin >> index;
                 remove(container, index);
                 break;
             }
@@ -108,10 +148,9 @@ int main() {
                 clear(container);
                 break;
             default:
-                cout << "Неверный выбор!" << endl;
+                std::cout << "Неверный выбор!" << std::endl;
         }
     }
-
 
     return 0;
 }

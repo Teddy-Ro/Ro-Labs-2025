@@ -6,10 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"childIndexes" : 
-					[
-						1
-					],
 					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
@@ -22,31 +18,12 @@
 						0,
 						1
 					]
-				},
-				{
-					"build" : "vecLib",
-					"jsonFile" : "directory-vecLib-Debug-ba601aa84f786a2296f1.json",
-					"minimumCMakeVersion" : 
-					{
-						"string" : "3.23"
-					},
-					"parentIndex" : 0,
-					"projectIndex" : 1,
-					"source" : "vecLib",
-					"targetIndexes" : 
-					[
-						2
-					]
 				}
 			],
 			"name" : "Debug",
 			"projects" : 
 			[
 				{
-					"childIndexes" : 
-					[
-						1
-					],
 					"directoryIndexes" : 
 					[
 						0
@@ -57,18 +34,6 @@
 						0,
 						1
 					]
-				},
-				{
-					"directoryIndexes" : 
-					[
-						1
-					],
-					"name" : "vecLib",
-					"parentIndex" : 0,
-					"targetIndexes" : 
-					[
-						2
-					]
 				}
 			],
 			"targets" : 
@@ -76,23 +41,16 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "clang-format::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-clang-format-Debug-91c20c3487e19196c66d.json",
+					"jsonFile" : "target-clang-format-Debug-ade101a3ecb86b504ef6.json",
 					"name" : "clang-format",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "lab7::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-lab7-Debug-f4670493e1ea775eb26c.json",
+					"jsonFile" : "target-lab7-Debug-75fb186055e4f391b729.json",
 					"name" : "lab7",
 					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 1,
-					"id" : "vecLib::@457894aef1f9e2943740",
-					"jsonFile" : "target-vecLib-Debug-db8555460d4539f31701.json",
-					"name" : "vecLib",
-					"projectIndex" : 1
 				}
 			]
 		}
